@@ -118,6 +118,15 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
 
     Prøver å legge til et system hvor alle varene som befinner seg i utvalgslisten blir vist som en egen boks på nettsiden. Her vil jeg at bilde og eventuelt info som handler om varen blir generert automatisk. Til nå har jeg fått til å få boksene opp på skjermen og de fjernes når noe på lista blir fjernet, men den fyller ikke helt ut den negative plassen som jeg ønsker. prøver å løse det med flexbokser.
 
+
+    25.05.2018 LEGGE TIL BESTILLING PROTOTYPE
+
+    Idag ønsker jeg å legge til et raskt system som lar deg kjøpe de varene man legger i handlekurven ved å fylle ut et skjema med informasjon om kjøperen. For nå ønsker jeg et simpelt system som jeg kan forbedre i fremtiden. 
+
+    Begynnte å legge til en lytterfunksjon som sier at når handlekurven har varer kan man begynne med betalingsprosessen. For nå er ikke logikken 100% solid så jeg må endre på koden men jeg vet hva jeg ønsker å gjøre. 
+
+    Fant ut en måte å lagre nøkkelnavnene på: Object.keys(variabel[posisjon])
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
