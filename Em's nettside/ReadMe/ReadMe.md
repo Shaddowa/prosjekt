@@ -3,7 +3,7 @@ Prosjekt nettside : Em's nettside
 
 --------------------------------------------------------------------------------Konsept-----------------------------------------------------------------------------------------------------------
 Ønsker å lage en fin og enkel nettside med mye funksjonalitet og avanserte php scripts. Ideen er at man skal få et godt inntrykk av maten som serveres, få en god kundeopplevelse samtidig som at
-det skal være brukervennlig og minimalistisk desig. Jeg henter litt inspirasjona av flere nettsider, inkludert : PINKG FISH, MCDONNALDS, CHIPOTLE, STOCK RESTURANG, MINT.COM    
+det skal være brukervennlig og minimalistisk desig. Jeg henter litt inspirasjona av flere nettsider, inkludert : PINK FISH, MCDONNALDS, CHIPOTLE, STOCK RESTURANG, MINT.COM    
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -38,15 +38,15 @@ det skal være brukervennlig og minimalistisk desig. Jeg henter litt inspirasjon
 
 -----------------------------------------------------------------------------Check List-----------------------------------------------------------------------------------------------------------
 
-   Lage alt innholdet på siden (input : utvalget)
+   Lage alt innholdet på siden (input : utvalget)   X
 
-   Vise alt innholdet som ligger i en database på nettsiden.
+   Vise alt innholdet som ligger i en database på nettsiden. (halveis, X)
 
-    Lage handlekurv systemet
+    Lage handlekurv systemet X
 
-    Bildekarusell med de forskjellige rettene
+    Bildekarusell med de forskjellige rettene (CHECKLIST VER 2)
 
-    Bestill online
+    Bestill online 
 
     ...
 
@@ -106,16 +106,6 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
 
 
 
-
-
-
-
-
-
-
-
-
-
     Prøver å legge til et system hvor alle varene som befinner seg i utvalgslisten blir vist som en egen boks på nettsiden. Her vil jeg at bilde og eventuelt info som handler om varen blir generert automatisk. Til nå har jeg fått til å få boksene opp på skjermen og de fjernes når noe på lista blir fjernet, men den fyller ikke helt ut den negative plassen som jeg ønsker. prøver å løse det med flexbokser.
 
 
@@ -127,7 +117,25 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
 
     Fant ut en måte å lagre nøkkelnavnene på: Object.keys(variabel[posisjon])
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    04.06.2018 FORTSETTELSE PÅ Å LEGGE TIL BESTILLING
+
+    Idag skal jeg fortsette med der jeg slapp, men ønsker å forenkle tankene mine så det funker uten å tenke noe veldig på optimiseringsdelens
+
+    Klarte det på en effektiv måte, lagde en lopp som gikk gjennom en liste med objekter
+    neste gang må jeg kontrolere at alle feltene er fylt ut og at når man "betaler skal bestillingen stå som en svarsetning for kundene og resturanten".
+
+---------------------------------------------------------------------------------------------------------------------------------------CHECKLIST VER 2 -----------------------------------------------------------
+
+    Starte med selve nettsiden
+
+    Designe layouten
+
+    Tenke på brukervennlighet
+
+    Hva skal være php hva skal være js?
+
+    Implementere alle de forskjellige funksjonene jeg har
 
 
 

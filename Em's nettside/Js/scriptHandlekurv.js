@@ -23,7 +23,7 @@ function leggTilHandlekurv(e) {
     var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK) };
     handlekurvEl.push(pushLinje);
 
-    
+
 
 };
 
@@ -41,14 +41,14 @@ handlekurvDivEl.addEventListener("mouseout", skjulHandlekurv);
 
 // Handlekurven genereres
 function visHandlekurv() {
-    
+
     var HKcontainer = document.getElementById("HKContainer");
     var HK = document.createElement("div");
     HK.id = "HK";
     HKcontainer.appendChild(HK);
 
     //HK.addEventListener("mouseout", skjulHandlekurv);
-    
+
 
     var visSum = document.createElement("div");
     visSum.className = "handleKurvEl";
@@ -58,12 +58,12 @@ function visHandlekurv() {
     for (var i = 0; i < handlekurvEl.length; i++) {
 
         if (handlekurvEl.length === 0) {
-            
+
         } else {
-            
+
             var divEl = document.createElement("div");
             divEl.className = "handleKurvEl";
-            divEl.innerHTML = "<hr>" +  handlekurvEl[i].vare + "<br>" + handlekurvEl[i].pris ;
+            divEl.innerHTML = "<hr>" + handlekurvEl[i].vare + "<br>" + handlekurvEl[i].pris;
             HK.appendChild(divEl);
 
         }
@@ -86,7 +86,9 @@ function skjulHandlekurv() {
 handlekurvDivEl.addEventListener("click", betaling);
 
 function betaling(){
-    if(handlekurvEl.length === 0){
+
+    //BETALINGSSKJEMA
+    if (handlekurvEl.length === 0) {
         console.log("du har ingen varer");
 
     } else {
@@ -94,36 +96,129 @@ function betaling(){
     }
 }
 
-function betalingsSkjema(){
-    var typer = [{Forrnavn : "text", Etternavn : "text", tlf : "number", 
-    Adresse : "text", Mail : "text", betaling : "radio"}]; 
+function betalingsSkjema() {
+    /*
+    var skjema = document.createElement("form");
+    skjema.id = "skjema";
+    betalingsSkjemaEl.appendChild(skjema);
+    var fNavn = document.createElement("input");
+    fNavn.type = "text";
+    fNavn.placeholder = "Fornavn";
+    var eNavn = document.createElement("input");
+    eNavn.type = "text";
+    eNavn.placeholder = "Etternavn";
+    var adresse = document.createElement("input");
+    adresse.type = "text";
+    adresse.placeholder = "Adresse";
+    var tlf = document.createElement("input");
+    tlf.type = "number";
+    tlf.placeholder = "tlf";
+    var eMail = document.createElement("input");
+    eMail.type = "text";
+    eMail.placeholder = "Mail";
+    var metode = document.createElement("input");
+    metode.type = "radio";
+    metode.value = "delivery";
+    metode.style.color = "red";
+    metode.name = "betaling";
+    var metode_2 = document.createElement("input");
+    metode_2.type = "radio";
+    metode_2.name = "betaling";
+    var buttonEl = document.createElement("button");
+    buttonEl.type = "button";
+    buttonEl.id = "pay";
+    buttonEl.innerHTML = "Proceed";
+
+    skjema.appendChild(fNavn);
+    skjema.appendChild(eNavn);
+    skjema.appendChild(adresse);
+    skjema.appendChild(tlf);
+    skjema.appendChild(eMail);
+    skjema.appendChild(metode);
+    skjema.appendChild(metode_2);
+    skjema.appendChild(buttonEl);
+
+
+    */
+    var typer = [{placeholder : "Fornavn", type : "text", id : 0}, 
+    {placeholder : "Etternavn", type : "text", id : 1}, 
+    {placeholder : "Email", type : "text", id : 2}, 
+    {placeholder : "tlf", type : "number", id : 3}, 
+    {placeholder : "Adresse", type : "text", id : 4},
+    {placeholder : "levering", type : "radio", name : "betaling", id : 5, value: true}, 
+    {placeholder : "drop in", type : "radio", name : "betaling",id : 6, value : false},
+    {placeholder : "Proceed", type : "button", id : "pay"},
+]
+
     var skjema = document.createElement("form");
 
-    var placeholders = [];
+    for(var i = 0; i < typer.length; i++){
+        var inputEl = document.createElement("input");
+        inputEl.className = "betaling";
+        if(typer[i].type == "radio"){
+            
+            if(typer[i].placeholder == "levering"){
+                inputEl.type = typer[i].type;
+                inputEl.name = typer[i].name;
+                inputEl.value = typer[i].value;
+                inputEl.id = typer[i].id;
+                var pEl_1 = document.createElement("label");
+                pEl_1.innerHTML = "Levering";
+                skjema.appendChild(inputEl);
+                skjema.appendChild(pEl_1);
 
+            }else {
+                
+                inputEl.type = typer[i].type;
+                inputEl.name = typer[i].name;
+                inputEl.value = typer[i].value;
+                inputEl.id = typer[i].id;
+                inputEl.checked = "checked";
+                var pEl_2 = document.createElement("label");
+                pEl_2.innerHTML = "Drop in"
+                skjema.appendChild(inputEl);
+                skjema.appendChild(pEl_2);
+            }
+            
+        } else if(typer[i].type == "button"){
+            inputEl.innerHTML = typer[i].placeholder;
+            inputEl.type = typer[i].type;
+            inputEl.id = typer[i].id;
+            skjema.appendChild(inputEl);
+        } else {
+            inputEl.placeholder = typer[i].placeholder;
+            inputEl.type = typer[i].type;
+            inputEl.id = typer[i].id;
+            skjema.appendChild(inputEl);
+        }
+        
+    }
+    betalingsSkjemaEl.appendChild(skjema);
+
+    /*
     for(var egenskaper in typer){
         //VIKTIG SETNING
         placeholders.push(Object.keys(typer[egenskaper]));
     
     }
+    */
     
-    for(var i = 0; i <= 6; i++){
-        var input = document.createElement("input");
-        if(i < 5){
-            input.type = typer[i].placeholders[i];
-            input.placeholder = placeholders[i];
-        } else if (i > 5){
-            input.type = typer[i].placeholders[i];
-            input.name = "betalingsMåte";
-        }
+    
 
-        skjema.appendChild(input);
-        bodyEl.appendChild(skjema);
-        
+    //SELVE BETALINGSDELEN
+    var betalingsKnapp = document.getElementById("pay");
 
 
+    betalingsKnapp.addEventListener("click", betal);
+
+
+    function betal() {
+        console.log("hello");
     }
-}
+
+
+
+};
 
 
 

@@ -2,6 +2,7 @@
 var bodyEl = document.querySelector("body");
 var tableEls = document.getElementById("table");
 var statsWindow = document.getElementById("stats");
+var betalingsSkjemaEl = document.getElementById("betalingsSkjema");
 
 
 
