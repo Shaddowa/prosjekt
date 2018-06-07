@@ -8,8 +8,8 @@ function leggTilHandlekurv(e) {
     var valgtVare = e.target;
 
     //gir en id for hver vare slik at det kan fjernes senere om ønsket
-    idHK++;
-
+    idHK = valgtVare.id;
+    console.log(idHK);
 
 
     sumTotal += Number(valgtVare.value);
@@ -17,11 +17,32 @@ function leggTilHandlekurv(e) {
 
     vareHK = valgtVare.name;
     prisHK = Number(valgtVare.value);
+    if (handlekurvEl.length === 0) {
+        var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK), antall : 1 };
+        handlekurvEl.push(pushLinje);
+        console.log(handlekurvEl[0].id)
+    } else {
+        var lagttil = false;
+        for (var i = 0; i < handlekurvEl.length; i++) {
+
+            if (handlekurvEl[i].id == idHK) {
+                lagttil = true;
+                console.log("hei");
+                console.log(handlekurvEl)
+                handlekurvEl[i] = { vare: vareHK, pris: prisHK, id: Number(idHK), antall: antall++ };
+                break;
+            }            
+        }
+        if(!lagttil) {
+            var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK), antall: 1 };
+            handlekurvEl.push(pushLinje);
+        }
+    }
 
 
-    //Trenger ikke mer enn varenavn og pris 
-    var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK) };
-    handlekurvEl.push(pushLinje);
+
+
+
 
 
 
@@ -49,7 +70,6 @@ function visHandlekurv() {
 
     //HK.addEventListener("mouseout", skjulHandlekurv);
 
-
     var visSum = document.createElement("div");
     visSum.className = "handleKurvEl";
     visSum.innerHTML = "Totalt : " + sumTotal;
@@ -60,6 +80,7 @@ function visHandlekurv() {
         if (handlekurvEl.length === 0) {
 
         } else {
+
 
             var divEl = document.createElement("div");
             divEl.className = "handleKurvEl";
@@ -85,7 +106,7 @@ function skjulHandlekurv() {
 //Betalingsfunksjon
 handlekurvDivEl.addEventListener("click", betaling);
 
-function betaling(){
+function betaling() {
 
     //BETALINGSSKJEMA
     if (handlekurvEl.length === 0) {
@@ -140,24 +161,24 @@ function betalingsSkjema() {
 
 
     */
-    var typer = [{placeholder : "Fornavn", type : "text", id : 0}, 
-    {placeholder : "Etternavn", type : "text", id : 1}, 
-    {placeholder : "Email", type : "text", id : 2}, 
-    {placeholder : "tlf", type : "number", id : 3}, 
-    {placeholder : "Adresse", type : "text", id : 4},
-    {placeholder : "levering", type : "radio", name : "betaling", id : 5, value: true}, 
-    {placeholder : "drop in", type : "radio", name : "betaling",id : 6, value : false},
-    {placeholder : "Proceed", type : "button", id : "pay"},
-]
+    var typer = [{ placeholder: "Fornavn", type: "text", id: 0 },
+    { placeholder: "Etternavn", type: "text", id: 1 },
+    { placeholder: "Email", type: "text", id: 2 },
+    { placeholder: "tlf", type: "number", id: 3 },
+    { placeholder: "Adresse", type: "text", id: 4 },
+    { placeholder: "levering", type: "radio", name: "betaling", id: 5, value: true },
+    { placeholder: "drop in", type: "radio", name: "betaling", id: 6, value: false },
+    { placeholder: "Proceed", type: "button", id: "pay" },
+    ]
 
     var skjema = document.createElement("form");
 
-    for(var i = 0; i < typer.length; i++){
+    for (var i = 0; i < typer.length; i++) {
         var inputEl = document.createElement("input");
         inputEl.className = "betaling";
-        if(typer[i].type == "radio"){
-            
-            if(typer[i].placeholder == "levering"){
+        if (typer[i].type == "radio") {
+
+            if (typer[i].placeholder == "levering") {
                 inputEl.type = typer[i].type;
                 inputEl.name = typer[i].name;
                 inputEl.value = typer[i].value;
@@ -167,8 +188,8 @@ function betalingsSkjema() {
                 skjema.appendChild(inputEl);
                 skjema.appendChild(pEl_1);
 
-            }else {
-                
+            } else {
+
                 inputEl.type = typer[i].type;
                 inputEl.name = typer[i].name;
                 inputEl.value = typer[i].value;
@@ -179,8 +200,8 @@ function betalingsSkjema() {
                 skjema.appendChild(inputEl);
                 skjema.appendChild(pEl_2);
             }
-            
-        } else if(typer[i].type == "button"){
+
+        } else if (typer[i].type == "button") {
             inputEl.innerHTML = typer[i].placeholder;
             inputEl.type = typer[i].type;
             inputEl.id = typer[i].id;
@@ -191,7 +212,7 @@ function betalingsSkjema() {
             inputEl.id = typer[i].id;
             skjema.appendChild(inputEl);
         }
-        
+
     }
     betalingsSkjemaEl.appendChild(skjema);
 
@@ -202,8 +223,8 @@ function betalingsSkjema() {
     
     }
     */
-    
-    
+
+
 
     //SELVE BETALINGSDELEN
     var betalingsKnapp = document.getElementById("pay");

@@ -31,6 +31,11 @@ function visVarer(){
         buttonEl.className = "buttonVare";
         buttonEl.value = Number(utvalgEl[i].pris);
         buttonEl.name = utvalgEl[i].vare;
+        buttonEl.id = i;
+
+        
+        
+        
         
         //Om knappen trykkes skal funksjonen leggTilHandlekurv() starte.
         buttonEl.addEventListener("click", leggTilHandlekurv);

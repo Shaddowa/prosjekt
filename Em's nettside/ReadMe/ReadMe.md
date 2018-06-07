@@ -125,6 +125,10 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     Klarte det på en effektiv måte, lagde en lopp som gikk gjennom en liste med objekter
     neste gang må jeg kontrolere at alle feltene er fylt ut og at når man "betaler skal bestillingen stå som en svarsetning for kundene og resturanten".
 
+
+    07.06.2018 FORBEDRE HANDLEKURVSYSTEMET OG LEGGE TIL BETALINGSMELDING
+
+    Idag ønsker jeg og vise flere varer grupert i handlekurv systemet slik at X2 lakseburger (pris) vises isteden for lakseburger ... lakseburger. Jeg vil også få til en konfirmasjons melding som viser kundens bestilling.
 ---------------------------------------------------------------------------------------------------------------------------------------CHECKLIST VER 2 -----------------------------------------------------------
 
     Starte med selve nettsiden
@@ -136,6 +140,8 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     Hva skal være php hva skal være js?
 
     Implementere alle de forskjellige funksjonene jeg har
+
+    --------------------------------------Logg----------------------------------------------------
 
 
 
