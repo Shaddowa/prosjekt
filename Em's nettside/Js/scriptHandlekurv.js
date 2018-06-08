@@ -3,13 +3,16 @@ var sumTotal = 0;
 
 
 
-function leggTilHandlekurv(e) {
+
+function leggTilHandlekurv(e){
+
 
     var valgtVare = e.target;
 
     //gir en id for hver vare slik at det kan fjernes senere om ønsket
     idHK = valgtVare.id;
-    console.log(idHK);
+    
+    
 
 
     sumTotal += Number(valgtVare.value);
@@ -17,40 +20,52 @@ function leggTilHandlekurv(e) {
 
     vareHK = valgtVare.name;
     prisHK = Number(valgtVare.value);
+
     if (handlekurvEl.length === 0) {
+       
         var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK), antall : 1 };
         handlekurvEl.push(pushLinje);
-        console.log(handlekurvEl[0].id)
+        
+        
+        
+        
     } else {
         var lagttil = false;
-        for (var i = 0; i < handlekurvEl.length; i++) {
+        
+        for (var i = 0; i < handlekurvEl.length; i++){
 
-            if (handlekurvEl[i].id == idHK) {
+            if (idHK == Number(handlekurvEl[i].id)) {
                 lagttil = true;
-                console.log("hei");
-                console.log(handlekurvEl)
-                handlekurvEl[i] = { vare: vareHK, pris: prisHK, id: Number(idHK), antall: antall++ };
+                
+                handlekurvEl[i].antall += 1;
+                
                 break;
-            }            
+                
+            }  
+                     
         }
+
         if(!lagttil) {
+            
             var pushLinje = { vare: vareHK, pris: prisHK, id: Number(idHK), antall: 1 };
             handlekurvEl.push(pushLinje);
         }
+
+        
     }
 
 
 
 
-
+   
 
 
 
 };
 
 
-var handlekurvDivEl = document.getElementById("DinHandlekurv");
 
+var handlekurvDivEl = document.getElementById("DinHandlekurv");
 
 
 //Når man har musen over "handlevognen" vises innholdet
@@ -74,17 +89,15 @@ function visHandlekurv() {
     visSum.className = "handleKurvEl";
     visSum.innerHTML = "Totalt : " + sumTotal;
     HK.appendChild(visSum);
-
-    for (var i = 0; i < handlekurvEl.length; i++) {
-
-        if (handlekurvEl.length === 0) {
-
-        } else {
-
+    
+    if (handlekurvEl.length === 0) {
+    
+    } else {
+        for (var i = 0; i < handlekurvEl.length; i++) {
 
             var divEl = document.createElement("div");
             divEl.className = "handleKurvEl";
-            divEl.innerHTML = "<hr>" + handlekurvEl[i].vare + "<br>" + handlekurvEl[i].pris;
+            divEl.innerHTML = "<hr>" + "x" + handlekurvEl[i].antall + "   " + handlekurvEl[i].vare + "<br>" + handlekurvEl[i].pris;
             HK.appendChild(divEl);
 
         }
@@ -93,7 +106,7 @@ function visHandlekurv() {
 };
 
 
-//Fjerner "handlelisten" når musen forsvinner fra handlekurven. Informasjonen er fortsatt lagret og vil bli vist igjen når musen er over handlekurv div elementet
+
 function skjulHandlekurv() {
 
     var HK = document.getElementById("HK");

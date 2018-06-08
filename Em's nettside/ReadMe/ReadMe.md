@@ -129,6 +129,24 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     07.06.2018 FORBEDRE HANDLEKURVSYSTEMET OG LEGGE TIL BETALINGSMELDING
 
     Idag ønsker jeg og vise flere varer grupert i handlekurv systemet slik at X2 lakseburger (pris) vises isteden for lakseburger ... lakseburger. Jeg vil også få til en konfirmasjons melding som viser kundens bestilling.
+
+
+    08.06.2018 UPDATE
+    Idag fikset jeg med hjelp av lærerne mine handlekurv systemet. Jeg begynte med å legge til antall i handlekurvsystemet og sammenlignet ID til varen man trykket på med ID til varen i handlelkurven for å sjekke om man allerede hadde varene. 
+
+    Var en bug om hvordan jeg skulle øke antallet med de varene som allerde lå i handlekurven uten å skrive mye kode. Antallet var først ikke definert og lurte på om jeg burde lagre alle verdiene i et array for så å inkremere dem, men syntes dette var tungt. Vi fant en løsning ved
+
+    
+    if (idHK == Number(handlekurvEl[i].id)) {
+        lagttil = true;
+                
+        handlekurvEl[i].antall += 1;
+                
+        break;
+              
+    }  
+
+    Nå gjenstår betalingsmeldingen igjen!
 ---------------------------------------------------------------------------------------------------------------------------------------CHECKLIST VER 2 -----------------------------------------------------------
 
     Starte med selve nettsiden
