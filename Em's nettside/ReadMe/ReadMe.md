@@ -32,30 +32,10 @@ det skal være brukervennlig og minimalistisk desig. Jeg henter litt inspirasjon
 
     Om resturanten og konseptet
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
------------------------------------------------------------------------------Check List-----------------------------------------------------------------------------------------------------------
-
-   Lage alt innholdet på siden (input : utvalget)   X
-
-   Vise alt innholdet som ligger i en database på nettsiden. (halveis, X)
-
-    Lage handlekurv systemet X
-
-    Bildekarusell med de forskjellige rettene (CHECKLIST VER 2)
-
-    Bestill online 
-
-    ...
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
--------------------------------------------------------------------------------------Logg--------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------Logg------------------------------------------------------------------
 
 10.05.2018 : LETT IMPLEMENTERING AV UTVALG PÅ HJEMMESIDEN : PROTOTYPE
 
@@ -103,9 +83,6 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
 
 
 
-
-
-
     Prøver å legge til et system hvor alle varene som befinner seg i utvalgslisten blir vist som en egen boks på nettsiden. Her vil jeg at bilde og eventuelt info som handler om varen blir generert automatisk. Til nå har jeg fått til å få boksene opp på skjermen og de fjernes når noe på lista blir fjernet, men den fyller ikke helt ut den negative plassen som jeg ønsker. prøver å løse det med flexbokser.
 
 
@@ -147,19 +124,9 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     }  
 
     Nå gjenstår betalingsmeldingen igjen!
----------------------------------------------------------------------------------------------------------------------------------------CHECKLIST VER 2 -----------------------------------------------------------
 
-    Starte med selve nettsiden
 
-    Designe layouten
-
-    Tenke på brukervennlighet
-
-    Hva skal være php hva skal være js?
-
-    Implementere alle de forskjellige funksjonene jeg har
-
-    --------------------------------------Logg----------------------------------------------------
+    -----------------------------------------------------------------------Logg----------------------------------------------------------------------------
 
 
 

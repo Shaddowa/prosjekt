@@ -1,0 +1,32 @@
+
+✔ Lage nesten alle funksjonene på siden:  innholdet på siden (input : utvalget) @done (2018-6-19 13:13:34)
+✔ Lage handlekurv systemet @done (2018-6-19 13:13:51)
+
+
+☐ Designe layouten @critical  
+
+    ☐ ta forsøksbilder/video som jeg kan eksperimentere med 
+    ☐ Starte med selve nettsiden , designe ettersom jeg koder  
+    ☐ Bildekarusell med de forskjellige rettene [prototype]   
+    ☐ Implementere alle de forskjellige funksjonene jeg har 
+
+
+
+☐ php & mySQL ddatabse implementert i nettsiden @high 
+    ☐ adminSide
+    ☐ database for bilder og oppskrifter
+    ☐ rating system
+
+ 
+
+ 
+☐ Bestilling online @low
+    ☐ fast kunde eller engangskjøp?
+    ☐ betalingsmetode
+
+
+
+
+
+
+ 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Em's vårruller</title>
+    <link rel="Stylesheet" type="text/Css" href="Css/style.css">
+</head>
+
+<body>
+
+
+
+    <input class="leggTilVarer" id="mat" type="text" placeholder="Varenavn">
+    <input class="leggTilVarer" type="number" placeholder="pris">
+    <textarea class="leggTilVarer" id="textarea" placeholder="beskrivelse" cols=20 row=2></textarea>
+    <select id="variant" class="leggTilVarer">
+        <option value="mat">Mat</option>
+        <option value="drikke">Drikke</option>
+        <option value="snacks">Snacks</option>
+    </select>
+
+    <select id="kategori" class="leggTilVarer">
+        <option value="asiatisk">asiatisk</option>
+        <option value="amerikansk">amerikansk</option>
+        <option value="europeisk">europeisk</option>
+    </select>
+
+    <button id="leggTil">Legg til</button>
+
+    <div id="DinHandlekurv"></div>
+    <div id="HKContainer">
+        
+    </div>
+
+
+    <div id="tabell">
+
+        <table>
+            <tbody id="table">
+                <tr>
+                    <th>Vare</th>
+                    <th>Pris</th>
+                    <th>Beskrivelse</th>
+                    <th>type</th>
+                    <th>kategori</th>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div id="displayVarer">
+        
+    </div>
+
+    <div id="betalingsSkjema">
+
+    </div>
+
+
+
+    <script src="Js/scriptGlobaleVariabler.js"></script>
+    <script src="Js/scriptLeggTilVarer.js"></script>
+    <script src="Js/scriptVisInnhold.js"></script>
+    <script src="Js/scriptHandlekurv.js"></script>
+    <script src="Js/betal.js"></script>
+</body>
+
+
+</html>
