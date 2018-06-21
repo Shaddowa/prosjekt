@@ -1,13 +1,14 @@
+☐ Se på udemy om php og databaser @high 
 
-✔ Lage nesten alle funksjonene på siden:  innholdet på siden (input : utvalget) @done (2018-6-19 13:13:34)
-✔ Lage handlekurv systemet @done (2018-6-19 13:13:51)
+
 
 
 ☐ Designe layouten @critical  
 
-    ☐ ta forsøksbilder/video som jeg kan eksperimentere med 
-    ☐ Starte med selve nettsiden , designe ettersom jeg koder  
-    ☐ Bildekarusell med de forskjellige rettene [prototype]   
+    ✔ ta forsøksbilder/video som jeg kan eksperimentere med @done (2018-6-21 22:29:43)
+    ☐ Starte med selve nettsiden
+    ✔ Bildekarusell med de forskjellige rettene [prototype] @done (2018-6-21 22:29:47)
+    ☐ videoReplay med video av maten
     ☐ Implementere alle de forskjellige funksjonene jeg har 
 
 
@@ -23,6 +24,7 @@
 ☐ Bestilling online @low
     ☐ fast kunde eller engangskjøp?
     ☐ betalingsmetode
+    ☐ BetalingsMelding
 
 
 

@@ -126,7 +126,37 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     Nå gjenstår betalingsmeldingen igjen!
 
 
-    -----------------------------------------------------------------------Logg----------------------------------------------------------------------------
+    -----------------------------------------------------------------------Logg-----
 
+    21.06.2018 BILDEKARUSELL PROTOTYPE
+
+    Idag vill jeg fullføre bildekarusellen for nettsiden og legge til en kundebeskjed. Jeg bruker eksempelbilde jeg tok av Emma.
+
+    Da jeg skulle lage bildekarusellen ønsket jeg og lage den uten å se på tidligere eksempler for å prøve å gjøre det utenatt. Klarte å lage en ødedlagt versjon av noe som lignet på en bildekarusell men bildene oppførte seg ikke som ønsket.
+
+    For å gjøre det ordentlig brukte jeg tidligere eksempler, og nå skal jeg prøve å beskrive hvordan koden fungerer slik at jeg kan bruke det senere uten å se på tidligere kode.
+
+
+    ---------------------------------------------------------------------------------------------------------------------------------
+    | Jeg lagde først en beholder for bildene som skulle være i  karusellen                                                         |
+    | html : <div id="bildekarusell>                                                                                                |
+    |         </div>                                                                                                                |
+    |                                                                                                                               |
+    | I Js lagde jeg en liste med objekter hvor alle bildedne lå og utifra hvor mange elementer som lå i listen, skulle like mange  | div elementer bli lagt til karusellen.
+    
+      Js: for(var i = 0; i < bilder.lenght; i++){
+      Lag div elementer og legg til karusellen med samme className    
+      }
+
+     Etter det lagde jeg en variabel som skulle holde alle disse div elementene med dems className og sa at bildene[i] .style.backgroundImage = arrayets bilder[i].src. I samme for løkke sjekket jeg om hvis i ikke var 0, så skulle de  settes til display = "none".
+    
+      Etter det definerte jeg noen variabler:  synligBilde = 0, nesteBilde; og tid på 5000.
+    
+     Til slutt lagde jeg selve funksjonen som skulle flytte bildene. Denne funksjonen sa at om synligBilde(0) === bildene.length - 1 (antallElementer), så skulle neste bilde = 0.  om dette ikke var tilfellet så skulle neste bilde = synligBilde + 1 (1), denne ville øke etterhvert. 
+     Til slutt måtte det neste bildet gjøres klar til å gå inn, mens det allerede synlige bilde måtte gå ut av rammen. Når denne  syklusen er over, skal det synlige bilde ha lik verdi som det neste bildet og funksjojnen skal gjenta seg med funksjonen setTimeout.
+    
+    Siden det første bilde allerede hadde index 0 så kunne vi si at neste bilde hadde index 1 i bildene arrayet. Detter er viktig logikk for at rekkefølgen blir riktig!
+    ---------------------------------------------------------------------------------------------------------------------------------
+    Nå skal jeg legge til beskrivelsen som er angitt til hvert bilde.
 
 
