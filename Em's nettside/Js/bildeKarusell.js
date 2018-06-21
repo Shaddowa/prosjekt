@@ -46,36 +46,25 @@ var pText = document.createElement("p");
 pText.className = "text";
 pSeksjon.appendChild(pText);
 
+displayPicture();
 
-
-
-for (var i = 0; i < bildene.length; i++) {
-
-    bildene[i].style.backgroundImage = "url(../media/" + bilder[i].src + ")";
-    
-
-    if (i != 0) {
-        bildene[i].style.display = "none";
-    } else {
-        pText.innerHTML = label[i];
-    }
-
-}
 
 var synligBilde = 0;
 var nesteBilde;
-var tid = 10000;
+var tid = 4000;
 
 
 
 bildeKarusellEl.appendChild(pSeksjon);
 
 snurrKarusell = (div) => {
-    
+
 
 
     if (synligBilde === bildene.length - 1) {
         nesteBilde = 0;
+       displayPicture();
+        
     } else {
         nesteBilde = synligBilde + 1;
     }
@@ -85,14 +74,31 @@ snurrKarusell = (div) => {
     bildene[nesteBilde].style.display = "initial";
     bildene[nesteBilde].style.animation = "innMotHoyre 2s forwards";
     bildene[synligBilde].style.animation = "utTilVenstre 2s forwards";
+    //bildene[synligBilde].addEventListener("animationend", displayPicture);
+
 
     synligBilde = nesteBilde;
     setTimeout(snurrKarusell, tid);
 }
-    
+
 
 
 
 setTimeout(snurrKarusell, tid);
 
 
+function displayPicture() {
+
+    for (var i = 0; i < bildene.length; i++) {
+
+        bildene[i].style.backgroundImage = "url(../media/" + bilder[i].src + ")";
+
+
+        if (i != 0) {
+            bildene[i].style.display = "none";
+        } else {
+            pText.innerHTML = label[i];
+        }
+
+    }
+}
