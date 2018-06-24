@@ -10,7 +10,8 @@
 
 
 
-
+<script src="../Js/bildeKarusell.js"></script>
 </body>
+
 
 </html>

@@ -1,0 +1,124 @@
+html{
+    margin: 0;
+}
+
+html body{
+ 
+    width: 100%;;
+    height: 1080px;
+    background: url('../media/backgroundWebsite.png') no-repeat center center fixed;
+    
+
+}
+
+#nav-bar{
+    
+    width: 101%;
+    height: 200px;
+    margin-bottom: 12%;
+}
+
+.navItem{
+   width: 100%;
+    margin: 0 auto;
+    
+}
+
+.navItem .header-items{
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 2%;
+    width: 13%;
+    font-size: 34px;
+    text-decoration: none;
+    color: white;
+    font-family: century gothic;  
+    
+}
+
+.navItem .header-items-select{
+    border-style: none;
+    height: 20px;
+    width: 45%;
+    
+}
+
+.navItem .header-items-social{
+    width: 20%;
+    justify-content: space-between;
+
+}
+
+
+#logo-text{
+    margin-left: 10%;
+    margin-top: -60px;
+    width: 15%;
+    color: white;
+    font-family: century gothic;
+    font-size: 35px;
+    
+}
+
+#logo-text span{
+    font-size: 100px;
+    margin-left: -10%;
+
+}
+
+
+
+#vizualitation{
+  width: 1950px;
+  overflow: hidden;
+  margin-bottom: 30%;
+  position: absolute;
+  top: 320px;
+  left: -10px;
+}
+
+#bildeKarusell{
+    transform: rotate(-3deg);
+    overflow: hidden;
+    margin: 0 auto;
+    padding-left: -5px;
+    background-color: aliceblue;
+    width: 1970px;
+    margin-top: 20%;
+    height: 600px;
+    border: 2px solid darkred
+}
+
+.bilde{
+    width: 1970px;
+    height: 600px;
+    position: absolute;
+    left : 0;
+    
+}
+
+@keyframes innMotHoyre{
+    from{left:-1200px}
+    to{left: 0px}
+}
+
+@keyframes utTilVenstre{
+    from{left: 0px}
+    to{left: 1200px}
+}
+
+.text{
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0 auto;
+}
+
+
+
+
+#welcome{
+    position: absolute;
+    top: 1200px;
+    left: 600px;
+}

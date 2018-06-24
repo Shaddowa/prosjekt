@@ -160,3 +160,13 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     Nå skal jeg legge til beskrivelsen som er angitt til hvert bilde.
 
 
+    23.06.2018 STARTE MED NETTSIDEN
+
+    Idag skal jeg starte med nettsiden. Har fått design ide av ragnhild og skal prøve så godt jeg kan og etterligne hva hun har lagd. Har allerede laget en versjon av bakgrunnen jeg brukte med bilde redigeringsprogram, men jeg tror jeg bør gjøre bilde bedre ved at det ikke er ujevne linjer, men profesjonelle glatte linjer. Dette skal jeg jobbe med.
+
+
+    Fikset en nettside versjon av det ragnhild hadde lagd. Den ble ganske lignende, men la ikke til OM OSS bilde delen enda fordi jeg skal høre om det er det vi bør putte på startsiden. Det var ingen store bugs og var ganske greit og enkelt og kode. Må ha god orden på php filene mine og css filene mine.
+
+    Det eneste som ikke er "bra" med designet er at font og grafikk ikke er ordentlig gjort, men bare raskt funnet for å se det visuelt for å sjekke hvordan viben blir.
+
+
