@@ -1,0 +1,34 @@
+#contact_section{
+    width: 75%;
+    height: 100%;
+}
+
+ #contact_form{
+margin-left: 45%;
+margin-top: 30%;
+}
+
+
+.input_reg{
+    width: 300px;
+    height: 55px;
+    border-radius: 10% 2%;
+}
+
+.input_reg:focus{
+    outline:none;
+}
+label{
+    font-family: century Gothic;
+    color: white;
+}
+
+
+
+#button{
+    color:white;
+    width: 350px;
+    height: 60px;
+    background-color: darkolivegreen;
+    outline: none;
+}

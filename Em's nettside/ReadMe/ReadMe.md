@@ -170,3 +170,9 @@ Først vil jeg lage en funksjon i Js hvor det skal være lett å legge til det f
     Det eneste som ikke er "bra" med designet er at font og grafikk ikke er ordentlig gjort, men bare raskt funnet for å se det visuelt for å sjekke hvordan viben blir.
 
 
+
+25.06.2018 LEGGE TIL KONTAKT OSS SEKSJONEN
+
+idag vil jeg legge til kontakt oss seksjonen, som vil sende en e-post til emailen min. Koden skrev jeg ved hjelp av udemy klassen php. Derfor ingen personalisering i e-mail funksjonen.
+
+Jeg har nå lagt til kontakt siden på siden. Denne funker ikke helt enda fordi hadde problemer med php-en. Men jeg fikset også slik at vi kan linke til ulike CSS filer og ulike paths for filer utifra hvor i programmet man er. Dette er kritisk, for om vi ikke definerer disse variablene vil nettsiden ikke fungere. 

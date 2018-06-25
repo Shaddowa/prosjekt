@@ -1,0 +1,60 @@
+<?php
+
+define("TITLE", "Kontakt oss");
+define("HOME", "../../index.php");
+define("CSS", "/Css/headerCss.css");
+define("CSSExtra", "/Css/kontakt.css");
+define("INSTA", "/media/instagram.png");
+define("FACE", "/media/facebook.png");
+define("KONTAKT", "");
+define("LOGO", "/media/welcome.png");
+
+include('header.php');
+
+?>
+
+<?php
+
+    function has_header_injection($str){
+        return preg_match('~(\r|\n)~', $str);
+    }
+
+    if(isset($_POST['submit_mail'])){
+
+        $name = trim($_POST['name']);
+        $number = trim($_POST['number']);
+        $email = trim($_POST['email']);
+        $msg = $_POST['msg'];
+ 
+        if(has_header_injection($name) || has_header_injection($number) || has_header_injection($email) || has_header_injection($msg)){
+            die();
+            
+        }
+        
+        if(!$name || !$number || !$email || !$msg){
+           
+
+        }
+
+        $to = "hannatro@hotmail.com";
+
+        $subject = 'A message from $name <$email> was sent through your website';
+        $message = 'Name : $name';
+        $message .= 'Email: $email';
+        $message .= 'Message : \r\n\r\n $msg';
+        $message .= '\r\n\r\n phone: $number';
+        
+        $message = wordwrap($message, 80);
+
+        $header = 'MIME-Version 1.0 \r\n';
+        $header .= 'Content-type: text/plain; charset="iso-8859-1\r\n';
+        $header .= 'From: $name <$email> \r\n';
+        $header .= 'X-Priority: 1\r\n';
+        $header .= 'X-MSMail-Priority: High\r\n\r\n';
+
+        mail($to, $subject $message, $header);
+
+    
+    } else{
+        
+    }
