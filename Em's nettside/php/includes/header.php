@@ -14,10 +14,10 @@
     <div id="nav-bar">
         
         <div class="navItem wrapper">
-            <h4 class="header-items"><a class="header-items" href="php/includes/resturanter.php">Resturanter</a></h4>
-            <h4 id="omOss" class="header-items"><a class="header-items" href="php/includes/om oss.php">Om oss</a></h4></span>
+            <h4 class="header-items"><a class="header-items" href="<?php echo RESTURANT; ?>">Resturanter</a></h4>
+            <h4 id="omOss" class="header-items"><a class="header-items" href="<?php echo ABOUT; ?>">Om oss</a></h4></span>
             <h4 class="header-items"><a class="header-items" href="<?php echo KONTAKT ?>"> Kontakt</a></h4>
-            <h4 class="header-items"><a class="header-items" href="php/includes/online.php">Online</a></h4>
+            <h4 class="header-items"><a class="header-items" href="<?php echo ONLINE; ?>">Online</a></h4>
 
             <div class=" header-items header-items-language">
                 <select class="header-items-select">
