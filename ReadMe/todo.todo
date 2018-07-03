@@ -1,0 +1,52 @@
+FULLFØRTE TASKS:
+
+    ✔ ta forsøksbilder/video som jeg kan eksperimentere med @done (2018-6-21 22:29:43)
+    ✔ Starte med selve nettsiden @today @done (2018-6-24 01:54:53)
+    ✔ Bildekarusell med de forskjellige rettene [prototype] @done (2018-6-21 22:29:47)
+    ✔ fjerne linkens visuelle side til logoen vår @done (2018-6-25 16:30:37)
+    ✔ Lage alle php sidene som skal være på nettsiden, trenger ikke ha noe innhold enda! @done (2018-6-25 22:30:21)
+    ✔ Style select tagen, skal jeg ha tag eller drop down meny ved hower? @done (2018-6-26 15:26:56)
+    ✔ Lag footer elementet @done (2018-6-26 16:50:43)
+    ✔ bildekarusellen er ikke ferdig den er ikke i riktig form heller @done (2018-7-2 15:04:08)
+    ✔ linke footer elementene til de forskjellige sidene og appen @done (2018-7-3 12:02:28)
+    ✔ Fikse kontakt oss panelet med implementering av funksjonell sending av email @done (2018-7-3 13:59:54)
+
+
+GJENSTÅENDE TASKS: 
+
+NESTE TASK:
+    
+
+☐ Resturant side
+☐ Om oss side
+☐ adminSide
+☐ Avansert Bildekarusell
+
+    
+
+☐ Designe layouten @critical  
+
+    ☐ oppgradere grafikken på nettsiden og style
+
+
+☐ php & mySQL databse implementert i nettsiden @high 
+
+    ☐ database for bilder og oppskrifter
+    ☐ rating system
+    ☐ Språk instillinger
+    ☐ legge til link til drop down elementene som leder til andre språk sider
+
+ 
+
+ 
+☐ Bestilling online @low
+    ☐ fast kunde eller engangskjøp?
+    ☐ betalingsmetode
+    ☐ BetalingsMelding
+
+
+
+
+
+
+ 

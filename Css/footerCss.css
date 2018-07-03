@@ -1,0 +1,73 @@
+#footer{
+    margin-left: -0.5%;
+    margin-top: 15%;
+    width: 101%;
+    height: 600px;
+    background-color: rgba(21, 29, 21, 0.95)
+}
+
+
+
+
+#logo-text-footer{
+    margin: 0 auto;
+    width: 15%;
+    padding-top: 5%;
+    color: white;
+    font-family: century gothic;
+    font-size: 18px;
+    
+    
+}
+
+#logo-text-footer span{
+    font-size: 80px;
+    margin-left: -11%;
+
+}
+
+#linker{
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+}
+
+#footer-item_first{
+    margin-left: 5%;
+}
+
+.footerElms{
+    margin-top: 5%;
+    margin-left: 1.5%;
+    display: inline-block;
+    width: 10%;
+    color: white;
+    font-family: Century Gothic;
+}
+
+#footer-item_last{
+    margin-left: 30%;
+}
+
+hr{
+    background-color:  rgba(21, 29, 21, 0.1);
+    border-width: 0.41px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+#copyRight{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#copyRight-text{
+    margin-top: 2%;
+    text-align: center;
+    color: white;
+    font-family: Century gothic;
+
+}
