@@ -209,3 +209,80 @@ Har nå en funkende bildeKarusell som senere skal fungere slik at den kan gå ti
 
 Senere idag skal jeg prøve å lage de andre sidene (Resturant og om oss side), eller så begynner jeg på en admin side
 **14.00**
+
+
+05.07.2018 SKAL LAGE ADMIN SIDEN
+
+Idag skal jeg lage en admin side med log in funksjonalitet ved å følge en video (https://www.youtube.com/watch?v=xb8aad4MRx8&t=758s)
+
+skrive ned trinnene her så jeg kan se på det senere og huske hva jeg gjorde.
+
+#1 Localhost-PhpMyAdmin
+Først gikk vi inn i phpmyadmin på localhost tjeneren og lagdetabellen vi skal bruke senere. 
+
+    CREATE TABLE users(
+        user_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+        user_first varchar(256) not null,
+        user_last varchar(256) not null,
+        user_email varchar(256) not null,
+        user_uid varchar(256) not null,
+        user_pwd varchar(256) not null
+    );
+
+
+#Lage php  fil for å koble opp til databasen
+Skrev inn de forskjellige detaljene man må ha med for å koble til databasen min
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL | E_STRICT);
+
+**DET MAN MÅ HA FOR Å KOBLE SEG TIL**
+   $dbServername = "localhost";
+   $dbUsername = "root";
+   $dbPassword = "root"; // I Mamp er passordet "root", men i XXamp er passordet " ";!
+   $dbName = "loginsystem";
+
+   $connection = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+#Det er viktig at formen din har action =" " der du har denne php filen for at den kan sjekke riktig informasjon! Da må man angi file path til filen som 
+#skal ta seg av sjekkingen
+
+action="../loginsystem/dbh.php">
+
+
+#Derifra begynner jeg og sjekk (om input felt er tomme, og om de faktisk stemmer med databasen jeg har satt opp) //Det er inni en nested if else statment!
+
+if(empty($uid) || empty($pwd)){
+    header("Location: ../admin.php?login=empty"); //Redirects u
+    exit()
+}
+
+
+**SJEKKER BRUKERNAVN**
+$sql = "SELECT * FROM users WHERE user_uid = '$uid'";
+$result = mysqli_query($connection, $sql);
+$resultCheck = mysqli_num_rows($result);
+
+*Må være minst en rad for at php ikke skal sende deg tilbake*
+if($resultCheck < 1){
+    header("Location: ../admin.php?login=error");
+    exit();    
+}       
+    
+*Vi gjør det samme med passordet og hvis dette kommer tilbake true får du logget deg inn*
+if ($resultCheck == false){
+        header("Location: ../admin.php?login=error");
+        exit();
+} else if( $resultCheck == true){
+            header("Location: ../loginsystem/login.php?login=success"); //sender deg til loginscriptet
+            exit();
+}
+
+
+Dette var det jeg fikk gjort idag. Lagde et enkelt loginsystem som ikke er sikkert i det hele tatt, og heller ikke beskyttet mot hacking, men det funker for nå. Endringer skal gjøres senere.
+
+
+
+
+

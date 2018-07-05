@@ -1,5 +1,9 @@
-#e{
-    width: 10px;
-    height: 10px;
-    background-color: red;
+#map{
+    margin: 0px auto;
+    margin-top: 15%;
+    width: 65%;
+    height: 700px;
+    border: 10px solid darkolivegreen;
+    border-radius: 8% 2%;
+
 }

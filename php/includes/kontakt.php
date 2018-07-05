@@ -59,12 +59,13 @@ include('header.php');
            
             $subject = 'A new mail from $name <$email> was sent via your contact form';
               
-
+           
             $message = 'Name : $name \r\n';
             $message .= 'Email : $email \r\n';
             $message .= 'The message : \r\n $msg';
-            $message .= wordwrap($message, 100) '\r\n\r\n';
             $message .= 'Clients number: $number';
+            $message .= wordwrap($message, 100);
+           
        
             $header = 'MIME-Version: 1.0 \r\n';
             $header .= 'Content-type: text/plain; charset=iso-8859-1\r\n';     
@@ -74,7 +75,7 @@ include('header.php');
 
             mail($to, $subject, $message, $header);
          
-        
+     
    
     ?>  
 

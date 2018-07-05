@@ -1,0 +1,49 @@
+html body{
+    margin: 0;
+    padding: 0;
+    background-color: darkolivegreen;
+}
+
+
+#login{
+    
+    width: 100%;
+    height: 300px;
+    margin: 0px auto;
+    margin-top: 15%;
+    border: 2px solid black;
+    border-radius: 10% 2%;
+
+    background-color: white;
+
+}
+
+#login-form{
+    width: 50%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 5%;
+    
+} 
+
+
+
+
+.input{
+    width: 20%;
+    height: 20%;
+    margin-left: 40%;
+    border: 3px solid darkolivegreen;
+    border-radius: 10% 2%;
+   
+}
+
+#button{
+    margin-left: 40%;
+    width: 20%;
+    box-shadow: 1px 1px solid black;
+    background-color: white;
+    color: darkolivegreen;
+    font-weight: bold;
+    font-family: Century Gothic;
+}

@@ -30,6 +30,14 @@
         ?>
             <script src="../Js/bildeKarusell.js"></script>
         <?php
+
+    } else if (TITLE ===  "Resturanter | Sweet treats"){
+        
+        ?>
+        <script src="../../Js/Map.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ12RTRedzzCW2FJMWQm2CyFrK_X34HEk&callback=initMap"></script>
+        <?php
+    
     
     } else {
 
