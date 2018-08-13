@@ -12,14 +12,23 @@ FULLFØRTE TASKS:
     ✔ Resturant side @done (2018-7-3 21:21:09)
     ✔ Om oss side @done (2018-7-3 21:21:16)
     ✔ adminSideCreate @done (2018-7-5 22:06:15)
-
+    ✔ Gjøre ferdig utvalgspanelet slik at det funker (Se tidligere kode , bruk remarkable! ) @done (2018-7-15 14:04:19)
+    ✔ Koble opp mot databasen @done (2018-7-15 14:04:22)
+    ✔ Lage en tabell på admin siden som henter ut informasjon fra databasen slik at jeg kan manuelt fjerne de varene vi ikke skal ha lenger @done (2018-7-18 02:07:24)
+    ✔ Legge til bilde upload så bildet lagres med objektet @done (2018-7-21 22:20:58)
+    ✔ Lage slette knappen for elementene på admin siden @done (2018-7-21 22:50:32)
+    ✔ Lage feature funksjonen @done (2018-7-22 14:07:33)
+    ✔ Designe admin siden og legge til funksjonalitet @done (2018-7-22 14:07:48)
+    ✔ Avansert Bildekarusell @done (2018-8-8 14:01:03)
+    ✔ Sessions så man ikke kan nå admin siden uten en aktiv session @done (2018-8-12 03:20:19)
+    ✔ Lage index feature siden (UTEN BILDER FOR NÅ) @done (2018-8-13 22:59:45)
+     ✔ Øke sikkerheten på siden @done (2018-8-14 01:36:38)
 
 GJENSTÅENDE TASKS: 
 
 NESTE TASK:
-
-☐ Designe admin siden og legge til funksjonalitet
-☐ Avansert Bildekarusell
+☐ vise bilder på nettsidedn fra en blob (FEATURED SIDEN);
+☐ Lage index utvalg siden
 
     
 
@@ -27,22 +36,12 @@ NESTE TASK:
 
     ☐ oppgradere grafikken på nettsiden og style
 
-
 ☐ php & mySQL databse implementert i nettsiden @high 
-
-    ☐ database for bilder og oppskrifter
     ☐ rating system
     ☐ Språk instillinger
-    ☐ legge til link til drop down elementene som leder til andre språk sider
-
- 
-
- 
-☐ Bestilling online @low
-    ☐ fast kunde eller engangskjøp?
-    ☐ betalingsmetode
-    ☐ BetalingsMelding
-
+    ☐ Handdlekurv som skal bli sent via sms når kunden vil bestille
+   
+    
 
 
 

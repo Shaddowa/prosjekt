@@ -1,12 +1,7 @@
 <?php
    
- 
-
     define("TITLE", "Admin Page");
     define("AdminCss", "/Css/admin_css/adminCss.css");
-
-
-   
 
 ?>
 

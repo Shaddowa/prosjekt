@@ -4,6 +4,8 @@ Prosjekt nettside : Em's nettside
 --------------------------------------------------------------------------------Konsept-----------------------------------------------------------------------------------------------------------
 Ønsker å lage en fin og enkel nettside med mye funksjonalitet og avanserte php scripts. Ideen er at man skal få et godt inntrykk av maten som serveres, få en god kundeopplevelse samtidig som at
 det skal være brukervennlig og minimalistisk desig. Jeg henter litt inspirasjona av flere nettsider, inkludert : PINK FISH, MCDONNALDS, CHIPOTLE, STOCK RESTURANG, MINT.COM    
+
+UPDATE: For nå kan jeg lage en online dumplings og sommerrull buisniss bare for å selv bruke produktet og kanskje tjene litt penger og erfaring! Dette er mitt første "store" prosjekt så vi får se hvordan dette går.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -285,4 +287,216 @@ Dette var det jeg fikk gjort idag. Lagde et enkelt loginsystem som ikke er sikke
 
 
 
+14.07.2018 DESIGNE ADDMIN SIDEN
+
+Idag har jeg endelig tenkt til å style admin siden så jeg kan få frem varene mine på hjemmesiden ved å lage en database for alt jeg har! 
+
+
+**LOGOUT**
+
+Prøvde først : window.location.href("../adminPhp.php"); //Feilemelding, du har ikke tilgang
+
+**Update**
+
+Den funket allikavel? Men tydligvis er replace bedre fordi "because replace() does not keep the originating page in the session history, meaning the user won't get stuck in a never-ending back-button fiasco"
+
+----------------------------
+
+Dermed : bodyEl.innerHTML += "<?php  header("Location: ../adminPhp.php"); ?> // dette funket ikke
+
+------------------------------
+
+Til Slutt: window.location.replace("../adminPhp.php"); //Dette funket
+
+--------------------------------
+
+
+Har laget en admin side med utvalgsseksjon, ingenting på siden funker enda, men  det visuelle er någenlunde på plass. Har en logut button også, men den er ikke session aktivert så om man skriver inn url kan man komme seg inn på admin siden. Lagde også en database på PHP my admin som jeg skal koble opp til senere
+
+15.07.2018 BLI FERDIG MED LEGG TIL VARER ADMIN SIDEN
+
+Idag skal jeg implementere gamle funksjoner som jeg lagde før jeg startet på prosjektet for å legge til utvalg i nettsiden
+
+Jeg fikk til og koble til min database i phpmyadmin og den funker som den skal. Nå kan jeg legge til varer i databasen. 
+Hadde et problem med at jeg hadde laget skjemaet i js, men dette er ikke gunstig da det er veldig mer avansert og koble til databasene, så dermed tenker jeg at jeg ikke skal skrive så veldig mye js, men heller bruke php for å oppnå ønskede resultater. JS er tross alt bare "bakgrunns" aktivitet, og har ikke så mye med servere og gjøre. derfor er det bedre å ha "mange php filer" enn å prøve å lage alle sidene med ett js script!
+
+**SPØRSMÅL**
+Da jeg skulle legge til elementer i databasen min gikk det ikke med mindre jeg hadde denne setningen i programmet:
+
+if($connection -> query($sql)){
+    echo "spørringen $sql ble gjennomført";
+} else {
+    echo "noe gikk galt";
+}
+
+Noe jeg synes er rart fordi denne skal bare sjekke og gi beskjed om at noe funket eller ikke. Ønsker derfor kanskje å ha denne meldingen som en pop up istedenfor!
+
+**SVAR**
+Det var ganske åpenbart hvorfor det ikke funket. Glemte denne setningen. Det jeg hadde før var bare en variabel med kommandoer. for at noe faktisk skulle skje måtte jeg gjøre en mysqli_query! 
+
+$result = mysqli_query($connection, $sql);
+
+
+*SPØRSMÅL*
+Men da lurer jeg fortsatt på hvorfor det første funket selvom jeg aldri gjorde en mysqli_query. Jeg bare sjekket for at noe skjedde, men tydligvis så utføte den spørringen i samme slengen.
+
+
+
+17.07.2018 STARTE MED Å HENTE UT INFORMASJON FRA DATABASE TIL TABELL
+
+Idag skal jeg lage tabellen på adminsiden. Valgte å lage den første delen av tabellen på php siden, mens resten skal lages ved bruk av php kode. Hver gang jeg trykker på legg til vare skal en tabell oppdateres. Har litt OCD over at AI i sql ikke blir til 0 igjen men fortsetter og øker selvom elementene blir slettet på siden. Det har jo såklart ikke så mye og si siden koden vil fortsatt fungere helt fint, det er bare personlige problemer
+
+**BUG**
+
+Hadde en bug hvor det ikke gikk ann og hente informasjon fra databasen fordi $connection tydligvis ikke var tilgjengelig for funksjonen
+
+**LØSNING**
+Måtte angi parametere med ($connection) både i funksjonen og i den som kallet funksjonen for at det skulle funke.
+
+Valgte etter å ha lett etter den beste løsningen og skrive js kode i php kode ved bruk av script taggen slik at jeg kunne hente ut tabellen og endre den indre html med en ny <tr> tagg og veridier.
+
+**BUG**
+Tabellen endte opp med å ikke være definert (NULL) selvom scriptet var på bunden av siden
+
+**LØSNING**
+Tror at siden funksjonen og tabellen var så nærme hverandre så skapte dette problemet, men vet ikke helt. Jeg løste dette ved å kalle funksjonen en gang over i løpet av at siden lastet ned. 
+
+**BUG**
+Ville at <th> ikke skulle scrolle når overflow var nådd, men fant ikke en løsning på dette (enda), tenker at det ikke er så farlig, siden dette er en amatør nettside uansett. I fremmtiden ønsker jeg å finne ut dette
+
+
+
+12.07.2018 LAGE SLETTE KNAPPEN PÅ ADMIN SIDEN OG SÅ SKAL JEG PRØVE Å LØEGGE TIL FEATURE OG BILDER
+
+Idag skal jeg gjøre det mulig og slette elementer på admin siden. Dette er nok lett, derretter skal jeg legge til en ny input type ="file" og endre tabellen selections slik at jeg kan ha et bilde som hører til. (Kanskje best å ha en max størrelse på bildet også). Når det er ferdig skal jeg prøve å ha en status knapp som sier om bildet skal være på featured siden  eller ikke. Jeg tenker at bildekarusellen skal jeg personlig kode for selv slik at jeg kan ha knapper og slikt som passer til bildene.
+
+*BUG*
+
+Hadde store problemer med å slette innholdet på siden. Først og fremst ante jeg ikke hvilken vinkel jeg vill komme fra. Tenkte først og bruke Javascript for da kunne man legge til evenlistener på knappene og derifra få id til knappen. Da jeg prøvde dette var problemet og skrive sql kode, for da trenger man å bruke php for å få tilgang til serveren. Derfor prøvde jeg å skrive php kode i js, og hadde på et tidspunkt et div element som bare skulle fungere som et php vindu for å sette i gang en funksksjon. Problemet med denne løsningen var at det var veldig vanskelig og få e.target.id til å bli konvertert over til en php variabel som kunne brukes. Først skrev jeg JS i et script, men trodde det ikke klarte å fyre av komandoen fra to separate filer, så prøvde å skrive det i selections.php siden min. Prøvde å skrive JS i php og PHP i JS. Dette funket dårlig for meg. 
+
+*LØSNING*
+Det som gjorde det mulig og slette innholdet på siden min var ved å bytte ut <button> taggene med input type submit knapper som var linket opp mot en form. Kunn slik kunne jeg sjekke om en knapp var blitt trykket i php. dette hørtes veldig komplisert ut, og var derfor jeg ikke prøvde det når jeg slet litt, fordi jeg vill se om det var løselig på en annen måte (men nei). Derfor er alle "knappene" i en form som blir aktivert når de klikkes. for å vite hvilken knapp jeg trykket på sa jeg at valuen til knappen skulle være $selection_id. Dete hele ser slik ut:
+
+
+<form method = 'POST' action = ' '><input type='submit' name='delete' class='deleteButtonVarer' value = '$selection_id'></form>
+
+
+if(isset($_POST['delete'])){
+    $value = $_POST['delete'];
+
+    $sql = "DELETE FROM selections WHERE selection_id = '$value'";
+    $result = $connection -> query($sql);
+}
+
+I heighnseght kunne jeg spart masse tid ved å bare gjøre dette, men selvom jeg visste at dette kanskje var den beste løsningen, ville jeg ikke ta den fordi
+Jeg vil prøve å løse ting jeg sliter med, ikke kode ting jeg vet jeg kan fikse lett
+
+
+*BUG*
+Hadde også et problem med bildeupload. Nå har jeg laget et upload skjema som blir lagret i databasen som type blob, men problemet er å vise bildet. 
+Tenker at det ikke er så farlig enda, fordi jeg skal jo ha det på den hovedsiden, ikke admin siden. Men jeg er fortsatt usikker på om
+
+base64_encode er den riktige løsningen... vi får se.
+
+
+22.07.2018 LAGE FEATURE SIEDN OG VISE DEN PÅ INDEX SIDEN
+
+Idag skal jeg bli ferdig med å få feature siden til å funke. Har tenkt til å bruke feature checkbox for å si om de skal være med på siden. Kan også ha at max fetured items kan være et antaall, eller så kan jeg ha unlimited antall, men at man må bla for å se alle. Noe som ikke høres bra ut.
+
+
+For å løse dette lagde jeg en ny kolonne kalt selection_status som enten kunne være 1 eller 0. Brukte to forskjellige update setninger utifra hva som allerede var i denne kolonnen.
+
+**BUG**
+Prøvde å gjøre slik at når man har trykket på feature knappen så skulle knappen endre farge for å indikere at den er aktiv. Prøvde i JS, men problemet er at siden feature knappen er en submit knapp, så oppdateres siden og js blir refreshed... dette er dumt. Valgene ,å lagres, som jeg har, men vet ikke hvordan man skal skrive css kode i php utifra verdier i sql database.
+
+07.08.2018 / 08.08.2018FIKSE FEATURE KNAPPEN
+
+Idag skal jeg fikse feature knappen slik at den lyser grønt når den skal
+
+Har endret litt på kode strukturen slik at den er mer delt opp og enklere og lese. Den gir mer mening nå.
+
+**BUG**
+Har slitt velig med å implementere feature knappen fordi jeg ikke vet hvordan jeg skal angripe problemet:
+
+#1 Hvordan skal jeg skrive JS i PHP eller omvendt for å endre CSS
+#2 Hvordan kan jeg enklest måte få knappene grønne
+#3 Hvorfor er det så jævlig vanskelig
+
+
+**LØSNING**
+Fant ut en løsning og nå fungerer knappene slik de skal! Det tok faen meg lang tid ahaha. Jeg prøvde og failet en del, men jeg kom nærmere svaret etter at jeg eleminerte metoder som garantert ikke ville gå. Til slutt fant jeg den beste løsningen, men kanskje ikke den mest effektive!
+
+FØRST måtte jeg gjøre om på strukturen av koden min fordi den var rotete og uroganisert og ga ikke mye mening. Jeg endte opp med å lage elementene på siden først fordi jeg fikk undefined elementer når jeg skulle velge ut featurebutton elementene. Jeg hadde orginalt satt dem på bunden for jeg tenkte at om de slettet innholdet så måtte man ikke trykke to ganger på delete knappen for at det skulle registreres. *FIX* jeg bare satte at man skulle lage tabellen øverst også med delete funksjonaliteten over den, mens resten av koden skulle komme under.
+
+Hadde egentlig lyst til å endre farge med en gang når man skulle skifte statusen, men det funket ikke slik jeg ville og endte opp med at enten den siste eller første knappen bestemte alle knappenes farge. Trodde først at det var fordi scriptet gikk så fort og at elementene ikke loaded inn, men kan hende det funker nå siden jeg endret strukturen på koden
+
+Endte opp med å gjøre en fullstendig sjekk på slutten som skulle ta ID og status into concideration og bare endre alle hver gang en feature knapp ble trykket på. Dette var fordi jeg ikke kunne bruke e.target i JS fordi siden kom til å refreshe og JS ville bli resettet.
+
+Lagde to php arrays som jeg tok i bruk når jeg skrev for løkken min. Det er best og skrive JS i PHP ved bruk av echo! da kan man ta i bruk variabler fra php uten å få error: undefined variable
+
+    for($i = 0; $i < sizeof($ID); $i++){
+        echo "<script>
+                        
+        var button = document.getElementsByClassName('featureButtonVarer');
+                        
+        if($ID[$i] != button[$i].value){
+                        
+            console.log('ingen match')
+                        
+        } else {
+            if($statusB[$i] == 1){
+                button[$i].style.backgroundColor = 'green';
+            } else if($statusB[$i] == 0){
+                button[$i].style.backgroundColor = 'yellow';
+            }
+        }
+
+        </script>";
+    }
+ 
+
+Nå fungerer den som den skal!!
+
+
+
+08.08.2018 AVANSERT BILDEKARUSELL
+
+Idag vil jeg lage 'avansert bildekarusell' hvor brukeren ser hvilket bilde de ser på ved å se på de dottene for de skal nemlig skifte farge utifra hvilket bilde man ser på.
+
+
+Gikk greit lett, men jeg prøvde å lage hele bildekarusell filen litt mer rydddig med funksjoner som trigget hverandre og som sendte variablene videre ned, men fikk problemer med at bildene ble unddefined etter 1 runde.
+
+
+11.08.2018 FIKSE BILDE UPLOAD
+
+Idag har jeg tenkt til å fikse bilde upload på admin pagen også displaye en på featured siden.
+
+**BUG**
+
+Hadde en bug som jeg måtte rette opp i mens jeg skulle prøve å fikse bildene og dedt var at når man ladet siden igjen fikk man error melding om at checkstatus($connection) ikke var definert. Jeg lurte på hvorfor jeg fikke error da jeg trodde alt var perfekt med systemet, men det kan hende det var fordi jeg ikke prøvde og relode siden eller sjekke om den var helt sikker.
+
+**FIX**
+
+Måtte endre logikken og rekkefølgen på hvordan funksjonene skulle kjøre. Endret ingenting i koden spesifikt men puttet checkStatus() utenfor lag tabell funksjonen. Tror det funker nå.
+
+
+**SESSION**
+
+Frida hjalp meg med session funksjonen så nå kan man ikke komme på admin siden med mindre man har en session going. 
+
+**BUGG** Trodde session ikke funket som den skulle, men det viste seg at jeg lurte meg selv. Først og fremst så hadde jeg et logout script som var aktivt og som logget ut brukeren "uansett" om du hadde isset() funksjonen. Derfor ble man lurt fordi jeg manglet en <form> rundt input taggen unsett. Prøvde først og cleare browser cache som funket litt, ved at man ikke kunne logge in for første gang, men man sikk aldri en $_SESSION['login'] = false og ville om man hadde logget in 1 gang, komme inn uansett.
+
+**FIX**
+Jeg fjernet logout scriptet og la til en form rundt logut knappen. Dermed endret jeg statusen til logged out og for å være på den sikre siden satte jeg SESSION_UNSET(); som fjerner alle virkende session variablene som er registrert. Dermed skrev jeg SESSION_DESTROY(); som vil ødelegge sessionen og dermed relovate til admin siden Header('Location', 'loginsystem/admin.php?login=loged out');
+
+**HOW IT WORKS**
+
+Først starter man en SESSION_START(); som gjør at variabler kan bli overført til andre php scripts og funke som en måte å holde styr på brukeren (Om personen er logget in, hvem det er, hva personen har gjort i sin session, osv...). Dermed kan man bruke variabler ofte startet med $_SESSION['noe'] = noe;
+slik kan man kontrolere aktiviteten til brukeren over flere sider. Når man er ferdig og skal logge ut må man ødelegge sessionen. Man kan gjøre dette enten ved å sette $_SESSION['login'] = false. Eller så kan du være på den sikre siden og si SESSION_UNSET(); og SESSION_DESTROY(); før du omdirigerer brukeren til en annen side(log out siden);
+
+
+14.08.2018 LAGE FEATURED SLIDEND UTEN BILDER FOR NÅ OG PRØVE OG LIMITE TIL 4 FEATURES MAX
+
+
+Lagde feature siden uten bildene foreløpig. Den funker som den skal og det er flexboxer så uansett hvor mange features man har så vil plassen bli fordelt likt. Tror jeg ikke vil sette restriction på antall features fordi noen vil kanskje vise mer enn bare 4, kan heller skrive i tabellen "(Recomended (3-4))", for det ser sikkert best ut, men det funker uten å ha en max limit. Fikset også SESSION funksjonen på admin siden.
 

@@ -1,5 +1,7 @@
 <?php
-
+    
+   SESSION_START();
+    
    ini_set('display_errors', 1);
    ini_set('display_startup_errors', 1);
    error_reporting(E_ALL | E_STRICT);
@@ -14,18 +16,27 @@
 
 
     //LOGIN
-    if(isset($_POST['submit'])){
-        //$uid = mysqli_real_escape_string($connection, $_POST['username']);
-        //$pwd = mysqli_real_escape_string($connection ,$_POST['password']);
+    if(isset($_POST['submit']) && $_POST['submit'] == "Login"){
 
         $uid = $_POST['username'];
         $pwd = $_POST['password'];
+
+        function has_header_injections($str){
+            return preg_match('/[\r\n]/', $str);
+        }
+       
+        if(has_header_injections($uid) || has_header_injections($pwd)){
+            echo "<h1>You have inserted wrong data and will now start self destruct sequence 101</h1>";
+            exit;
+        }
+        
         
         //Error handlers
         //Check if inputs are empty
         
         if(empty($uid) || empty($pwd)){
-            header("Location: ../admin.php?login=empty");
+            header("Location: ../adminPhp.php?login=empty");
+            echo "mangler felt";
             exit();
            
         } else {
@@ -35,7 +46,8 @@
             $resultCheck = mysqli_num_rows($result);
     
             if($resultCheck < 1){
-                header("Location: ../admin.php?login=error");
+                header("Location: ../adminPhp.php?login=ingenbruker");
+                echo "ingen bruker";
                 exit();
     
             } else {
@@ -46,12 +58,18 @@
 
                 
                 if($resultCheck == false){
-                    header("Location: ../admin.php?login=error");
+                   
+                    header("Location: ../adminPhp.php?login=feilpassord");
+                    $_SESSION['login'] = false;
                     exit();
+                    
     
                 } else if( $resultCheck == true){
-                    header("Location: ../loginsystem/login.php?login=success");
-                    exit();
+
+                    header("Location: ../loginsystem/login.php?=success");
+                    $_SESSION['login'] = true;
+                    
+                   
                 }
 
             }
@@ -60,9 +78,11 @@
         }
     
 } else {
-    header("Location: ../admin.php?login=error");
+    header("Location: ../adminPhp.php?login=ops");
+    echo" du submita ike";
     exit();
 } 
+
 
 ?>
 
@@ -135,7 +155,7 @@ if(isset($_POST['submit])){
     }
 } else {
     //Then the location will shift to the login page and the script will stop
-    header("Location: ../admin.php");
+    header("Location: ../adminPhp.php");
     exit();
 }
 -->
