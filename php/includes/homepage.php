@@ -16,17 +16,18 @@
 ?>
 
 <div id="vissible">
-        
+    <div id="forward"></div>
+    <div id="backwards"></div>
     <div id="merryGoAround">
     
-    </div>
-    <!--
-    <div id="Welcome">
-        <!--<img src="../media/welcome.png">
-    </div>
-    -->
-            
+    </div>       
 </div>
+
+<div id="Welcome">
+    
+</div>
+<img id="welcomeImg" src="../media/welcome.png">
+<div id="first" class="fillers"></div>
 <h1 id ="love">WE <span style="color:lightcoral">LOVE</span></h1>
 <div id="featureSlide">
    
@@ -51,49 +52,46 @@
     
                 </div>";
                
-        }
-
-        
-        
-        
-        
-        
+        }  
 
     ?>
     
-    <?php
-       
-        /*
-
-
-
-        $sql = "SELECT * FROM selections";
-        $result = $connection -> query($sql);
-        
-        while($rad = $result -> fetch_assoc()){
-            
-            $varenavn = $rad['selection_name']
-            $vareid = $rad['selection_id']
-            $vareprice = $rad['selection_price']
-            $varedescription = $rad['selection_description']
-            $varestatus = $rad['selection_status'];
-            
-
-            if($varestatus == 1){
-                echo "<div class = 'gridColumns'>
-                <h5>$varenavn</h5><br>
-                <p>$varedescription</p>
-                </div>";
-                
-            } 
-           
-        }
-       } */
-       
-        ?>
-
     </div>
 </div>
+<div id="second" class="fillers">
+    <img src="../../media/noodles.png">
+    <p>FuXiang Dumplings er den eneste resturanten i Oslo som er drevet
+        av unge studenter og som leverer ekte asiatiske retter hjem til deg
+    </p>
+</div>
+<div id="third" class="fillers">
+    <img src="../../media/bowl.png">
+    <p>Bestiller du fra oss garanterer vi at du aldri får kalde retter.
+        Det er viktig for oss at maten skal være så fersk som mulig
+    </p>
+</div>
+<div id="fourth" class="fillers">
+    <img id="firstImg" src="../../media/delivery-truck.png">
+    <img src="../../media/shop.png">
+    <p>Vi har både leverings tjenester og pick up alternativer
+    </p>
+</div>
+<div id="fifth" class="fillers">
+    <img id="firstImg" src="../../media/hour.png">
+    <p>Avtal en tid og metod, mens vi gjør resten
+    </p>
+</div>
+<div id="sixth" class="fillers">
+    <img id="secondImg" id="firstImg" src="../../media/placeholder.png"> : Årvollveien 34e <br>
+    <img src="../../media/iphone.png"> : 41216256
+
+    <h1> We do pickup here <span style="display: block; margin-top: 2%; text-align: center;">&#8595;</span></h1>
+    <div id="map"></div>
+    
+</div>
+
+
+
 
     
 

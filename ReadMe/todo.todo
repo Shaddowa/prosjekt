@@ -22,7 +22,10 @@ FULLFØRTE TASKS:
     ✔ Avansert Bildekarusell @done (2018-8-8 14:01:03)
     ✔ Sessions så man ikke kan nå admin siden uten en aktiv session @done (2018-8-12 03:20:19)
     ✔ Lage index feature siden (UTEN BILDER FOR NÅ) @done (2018-8-13 22:59:45)
-     ✔ Øke sikkerheten på siden @done (2018-8-14 01:36:38)
+    ✔ Øke sikkerheten på siden @done (2018-8-14 01:36:38)
+    ✔ Endre bildekarusellen @done (2018-8-19 13:28:37)
+    ✔ oppgradere grafikken på nettsiden og style @done (2018-8-19 13:28:54)
+    ✔ Endre utseende på nettsiden. @done (2018-8-19 13:29:09)
 
 GJENSTÅENDE TASKS: 
 
@@ -34,7 +37,7 @@ NESTE TASK:
 
 ☐ Designe layouten @critical  
 
-    ☐ oppgradere grafikken på nettsiden og style
+  CONST: små tweaks
 
 ☐ php & mySQL databse implementert i nettsiden @high 
     ☐ rating system

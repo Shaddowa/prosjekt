@@ -15,9 +15,9 @@
         <div id="nav-bar">
             
             <div class="navItem wrapper">
-                <h4 class="header-items"><a class="header-items" href="<?php echo RESTURANT; ?>">Resturanter</a></h4>
                 <h4 id="omOss" class="header-items"><a class="header-items" href="<?php echo ABOUT; ?>">Om oss</a></h4></span>
-                <h4 class="header-items"><a class="header-items" href="<?php echo KONTAKT ?>"> Kontakt</a></h4>
+                <h4 id="kontakt" class="header-items"><a class="header-items" href="<?php echo KONTAKT ?>"> Kontakt</a></h4>
+                <a id="link_home" style="text-decoration:none; color:black" href="<?php echo HOME; ?>"><img id="logo" class="header-items" style="width: 30%; height: 30%;" src="../../media/logo.png"><a>
                 <h4 class="header-items"><a class="header-items" href="<?php echo ONLINE; ?>">Online</a></h4>
 
                 <div class="header-items header-items-language">
@@ -34,7 +34,7 @@
                 </div>
 
                 <div id="logo-text">
-                    <a id="link_home" style="text-decoration:none; color:white" href="<?php echo HOME; ?>"><h1>Sweet<span> Treats<span> </h1><a>
+                   
                 </div>
             </div>
 

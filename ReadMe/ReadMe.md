@@ -500,3 +500,9 @@ slik kan man kontrolere aktiviteten til brukeren over flere sider. Når man er f
 
 Lagde feature siden uten bildene foreløpig. Den funker som den skal og det er flexboxer så uansett hvor mange features man har så vil plassen bli fordelt likt. Tror jeg ikke vil sette restriction på antall features fordi noen vil kanskje vise mer enn bare 4, kan heller skrive i tabellen "(Recomended (3-4))", for det ser sikkert best ut, men det funker uten å ha en max limit. Fikset også SESSION funksjonen på admin siden.
 
+
+17.08.2018 / 18.08.2018 / 19.08.2018 FORTSETTE DER JEG SLAPP MED Å ENDRE LITT PÅ WEBSIDE LAYOUTEN
+
+Idag må jeg ordne opp i det estetiske
+
+Jeg endret bildekarusellen så nå ligner den på den prototypen ragnhild først sendte til meg. Tror den funker og man kan trykke fram og tilbake på bildekarusellen og se bildene slik. Må bug teste litt til, men virker lovende. Var ikke vanskelig og få det til. Måtte bare ha noen div elementer med eventlistener og om de ble trykket ned endret jeg bilde utifra hvilken vei jeg klikket.

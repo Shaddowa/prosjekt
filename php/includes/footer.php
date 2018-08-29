@@ -3,12 +3,11 @@
         
             
             <div id="logo-text-footer">
-                    <a id="link_home" style="text-decoration:none; color:white" href="<?php echo HOME; ?>"><h1>Sweet<span> Treats<span> </h1><a>
+                    <a id="link_home" style="text-decoration:none; color:white" href="<?php echo HOME; ?>"><a id="link_home" style="text-decoration:none; color:black" href="<?php echo HOME; ?>"><img id="logo" class="header-items" style="width: 25%; height: 25%;" src="../../media/logo.png"><a>
             </div>
 
             <div id="linker">
-                <a href="<?php echo ABOUT ?>"><h3 id="footer-item_first" class="footerElms">Om Sweet Treats</h3></a>
-                <a href="<?php echo RESTURANT ?>"><h3  class="footerElms">Våre resturanter</h3></a>
+                <a href="<?php echo ABOUT ?>"><h3 id="footer-item_first" class="footerElms">Om oss</h3></a>
                 <a href="<?php echo ONLINE ?>"><h3  class="footerElms">Bestill online</h3></a>
                 <a href="<?php echo KONTAKT ?>"><h3  class="footerElms">Kontakt oss</h3></a>
 
@@ -20,22 +19,22 @@
         </div>
 
         <div id="copyRight wrapper">
-            <small><p id="copyRight-text">&copy; Sweet Treats 2018. All rights reserved </p></small>
+            <small><p id="copyRight-text">&copy; FuXiang Dumplings 2018. All rights reserved </p></small>
         </div>
     </div>
 </div>
 <?php 
     if(TITLE === "Home Page | Sweet Treats"){
-    
         ?>
             <script src="../Js/bildeKarusell.js"></script>
+            <script src="../../Js/Map.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ12RTRedzzCW2FJMWQm2CyFrK_X34HEk&callback=initMap"></script>
         <?php
 
-    } else if (TITLE ===  "Resturanter | Sweet treats"){
+    } else if (TITLE ===  "Kontakt oss | Sweet treats"){
         
         ?>
-        <script src="../../Js/Map.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ12RTRedzzCW2FJMWQm2CyFrK_X34HEk&callback=initMap"></script>
+       
         <?php
     
     

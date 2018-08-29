@@ -5,7 +5,6 @@ define("TITLE", "Om oss | Sweet Treats");
 //linking to the different pages
 define("HOME", "../../index.php");
 define("KONTAKT", "kontakt.php");
-define("RESTURANT", "resturanter.php");
 define("ABOUT", "");
 define("ONLINE", "online.php");
 

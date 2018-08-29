@@ -5,7 +5,6 @@ define('TITLE', 'Kontakt oss | Sweet Treets');
 //linking to the different pages
 define('HOME', '../../index.php');
 define('KONTAKT', '');
-define('RESTURANT', 'resturanter.php');
 define('ABOUT', 'about.php');
 define('ONLINE', 'online.php');
 

@@ -5,7 +5,6 @@
 
     define("HOME", "");
     define("KONTAKT", "/php/includes/kontakt.php");
-    define("RESTURANT", "/php/includes/resturanter.php");
     define("ABOUT", "/php/includes/about.php");
     define("ONLINE", "/php/includes/online.php");
 
