@@ -48,14 +48,15 @@
         $pris = $_POST['pris'];
         $beskrivelse = $_POST['beskrivelse'];
         $type = $_POST['type'];
-        $picture = $_POST['picture'];
-
+        $picture_name = $_FILES['picture']['name'];
+        $picture = addslashes(file_get_contents($_FILES['picture']['tmp_name']));
+           
         if(!$vare || !$pris || !$beskrivelse || !$type){  //!bilde her){
             echo '<h1 style = "width: 100%; text-align: center"><a href =" ">Du manglet et felt</a></h1>';
             exit();
 
         } else{
-            $sql = "INSERT INTO selections (selection_name, selection_price, selection_type, selection_description, selection_picture) VALUES ('$vare', '$pris', '$type', '$beskrivelse', '$picture')";
+            $sql = "INSERT INTO selections (selection_name, selection_price, selection_type, selection_description, selection_picture_name, selection_picture) VALUES ('$vare', '$pris', '$type', '$beskrivelse', '$picture_name', '$picture')";
             $result = mysqli_query($connection, $sql);
         }
 
@@ -64,7 +65,7 @@
 ?>
 
 <!--Her starter formen -->
-    <form method = "POST" action "">
+    <form method = "POST" action "" enctype="multipart/form-data">
         <input type="text" class = "leggTilVarer" placeholder= "Varenavn" name="vare">
         <input type="number" class = "leggTilVarer" placeholder= "pris" name="pris">
         <textarea class ="leggTilVarer" placeholder = "Beskrivelse" name="beskrivelse"></textarea>
@@ -75,7 +76,7 @@
 
         </select>
         
-        <input type="file" class="leggTilVarer" accept="image/png, image/jpeg" name="picture">Upload Picture
+        <input type="file" class="leggTilVarer" name="picture">Upload Picture
         <input id ="button" type="submit" value ="Legg Til" name="legg_til">
     </form>
 
@@ -145,9 +146,16 @@ function lagTabell($connection){
         $selection_type = $rad['selection_type'];
         $selection_price = $rad['selection_price'];
         $selection_description = $rad['selection_description'];
-        $selection_picture = $rad['selection_picture'];
+        $selection_picture_name = $rad['selection_picture_name'];
+        /*$selection_picture = $rad['selection_picture'];*/
 
-       $currentSentence .=  "<tr><td> $selection_name</td><td>  $selection_price</td><td>  $selection_description</td><td>  $selection_type</td><td>  $selection_id</td><td>$selection_picture</td><td><form method = 'POST' action = ' '><input type='submit' name='feature' class='featureButtonVarer' value = '$selection_id'></form></td><td><form method = 'POST' action = ' '><input type='submit' name='delete' class='deleteButtonVarer' value = '$selection_id'></form></td></tr>";
+       $currentSentence .=  "<tr><td> $selection_name</td><td>  $selection_price</td><td>"  .
+                            "$selection_description</td><td>  $selection_type</td><td>"  .
+                            "$selection_id</td><td>$selection_picture_name</td><td>" .
+                            "<form method = 'POST' action = ' '><input type='submit' name='feature'" .
+                            "class='featureButtonVarer' value = '$selection_id'></form></td><td>" .
+                            "<form method = 'POST' action = ' '><input type='submit' name='delete'" .
+                            "class='deleteButtonVarer' value = '$selection_id'></form></td></tr>";
     
     }
 
@@ -239,6 +247,7 @@ function checkStatus($connection){
 
         </script>";
     }
+    
 } 
 
     

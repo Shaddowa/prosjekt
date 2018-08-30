@@ -40,17 +40,18 @@
         $result = $connection -> query($sql);
         
         while($rad = $result -> fetch_assoc()){
+        
            $image = $rad['selection_picture'];
            $name = $rad['selection_name'];
-           
-           
+           $selection_id = $rad['selection_id'];
+          
             echo 
                 
-                "<div class='featured'>
-                    $image
-                    <p>$name</p>
+                "<div class='featured'>".
+                    "<img src='/php/includes/image.php?id=".$selection_id."'>".
+                    "<p>$name</p>".
     
-                </div>";
+                "</div>";
                
         }  
 

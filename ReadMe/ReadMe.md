@@ -506,3 +506,18 @@ Lagde feature siden uten bildene foreløpig. Den funker som den skal og det er f
 Idag må jeg ordne opp i det estetiske
 
 Jeg endret bildekarusellen så nå ligner den på den prototypen ragnhild først sendte til meg. Tror den funker og man kan trykke fram og tilbake på bildekarusellen og se bildene slik. Må bug teste litt til, men virker lovende. Var ikke vanskelig og få det til. Måtte bare ha noen div elementer med eventlistener og om de ble trykket ned endret jeg bilde utifra hvilken vei jeg klikket.
+
+
+**BUG**
+
+30.08.2018
+Bildeopplasting.
+Lagret navn, men ikke bilde data.
+
+**FIX**
+I formen la til funksjon for filopplastning (enctype="multipart/form-data")
+
+I POST handleren bruker $_FILES for å lese filnavn og data, ikke $_POST
+La til selection_picture_name i DB for å kunne lagre navn og det faktiske bilde i databsen.
+Laget image.php som henter bilde data, og sender videre bilde som kan vises i browseren.
+"<img src='/php/includes/image.php?id=".$selection_id."'>" viser bilde.
