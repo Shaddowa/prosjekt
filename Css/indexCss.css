@@ -1,4 +1,6 @@
-
+body{
+    margin: 0;
+}
 #vissible{
     margin-left: -2%;
     width: 1970px;
@@ -121,198 +123,162 @@
     to{left: -1930px}
 }
 
-#Welcome{
-    position: absolute;
-    width: 1990px;
-    height: 300px;
-    background-color: #0D0900;
-    margin-left: -2%;
+#welcome{
+    
     margin-top: 15%;
-    z-index: 2;
-  
-}
-
-#welcomeImg{
-    position: absolute;
-    left: 38%;
-    top: 130%;
-    z-index: 3;
-}
-
-.fillers{ 
-    width: 100%;
-    height: 600px;
-}
-
-#first{
-    margin-top: 20%;
-    background-image: url("../../media/asianfood.jpg");
-}
-
-
-#love{
-    position: absolute;
-    z-index: 2;
-    left: 35%;
-    top: 199%;
-    font-size: 15rem;
-    margin: 0px;
-    font-family: monospace;
-    color: white;
-    text-shadow: 4px 4px slategrey;
-}
-
-#featureSlide{
-    width: 105%;
-    margin-left: -2%;
-    height: 450px;
-    padding: 15px;
-    background-color: white;
-    z-index: 1;
-}
-
-
-#featureContent{
-    width: 98%;
-    height: 95%;
-    display: flex;
-    border: 3px solid darkolivegreen;
-}
-
-.featured{
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    font-size: 32px;
-    font-family: Century Gothic;
-    font-weight: bold;
-    color: black;
+    margin-left: 12%;
     
 
 }
 
-.featured:nth-child(odd){
-    background-color: grey;
+
+.break{
+    text-align: center;
+    font-family: Century gothic;
+    font-size: 6em;
 }
 
-#second{
-    background-color: rgb(212, 255, 224);
-}
-
-#second img{
-    margin-left: 15%;
-    margin-top: 5%;
-    width: 20%;
-    height: 50%;
-}
-
-#second p{
-    float: right;
-    width: 600px;
+#featureContent{
+    width: 100%;
     height: auto;
-    font-family: Century Gothic;
-    font-size: 1.5em;
-    margin: 10%;
-    margin-right: 15%;
+    display: block;
+    
 }
 
-#third{
-    background-color: rgb(255, 252, 212);
-}
-
-#third img{
-    float: right;
-    margin-top: 5%;
-    margin-right: 15%;
-    width: 20%;
-    height: 50%;
-}
-
-#third p{
-    float: left;
-    width: 600px;
-    height: auto;
-    font-family: Century Gothic;
-    font-size: 1.5em;
-    margin: 10%;
+.featured{
+    width: 100%;
+    height: 600px;
+    margin: 0px auto;
+    display: inline-block;
+    margin-bottom: 5%;
+    
   
 }
 
-#fourth{
-    background-color: rgb(255, 226, 212);
-}
-
-#fourth #firstImg{
-    margin-left: 25%;
-}
-
-#fourth img{
+.featured:nth-child(even) .featured_pic{ 
+    float: left;
     width: 20%;
-    height: 50%;
-    margin-top: 2%;
-    margin-left: 15%;
-
-}
-
-#fourth p{
-    margin: 0px auto;
-    margin-top: 2%;
-    text-align: center;
-    width: 600px;
     height: auto;
-    font-family: Century Gothic;
-    font-size: 1.5em;
+    
+    margin: 5%;
 }
 
-
-#fifth{
-    background-color: rgb(212, 255, 224);
-
+.featured:nth-child(odd) .featured_pic{ 
+    float: right;
+    width: 20%;
+    height: auto;
+    
+    margin: 5%;
 }
 
-#fifth img{
-    margin-left: 15%;
+.featured:nth-child(even) .featured_name {
     margin-top: 5%;
-    width: 20%;
-    height: 50%;
-}
-
-#fifth p{
+    width: 40%;
     float: right;
-    width: 600px;
-    height: auto;
     font-family: Century Gothic;
-    font-size: 1.5em;
-    margin: 10%;
-    margin-right: 15%;
+    font-size: 3em;
+    
+    font-weight: bold;
 }
 
-#sixth{
-    background-color: bisque;
+.featured:nth-child(odd) .featured_name{
+    width: 60%;
+    float: left;
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 3em;
+  
+    font-weight: bold;
+    
 }
 
-#sixth img{
-    margin-left: 15%;
+.featured_description{
+    font-family: Century Gothic;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 12%;
+    width: 100%;
+    display: block;
+}
+
+
+.featured:nth-child(odd) .featured_read_more{
+    display: block;
+    width: 100px;
+    height: 40px;
+    float:left;
+    margin-left: 25%;
+    background-color: transparent;
+    font-family: Century Gothic;
+    border: 1px solid red;
+    cursor: pointer;
+ 
+    
+}
+
+.featured:nth-child(even) .featured_read_more{
+    display: block;
+    width: 100px;
+    height: 40px;
+    float: right;
+    margin-right: 25%;
+    background-color: transparent;
+    font-family: Century Gothic;
+    border: 1px solid red;
+    cursor: pointer;
+ 
+    
+}
+#link{
+    width: 100%;
+    height: auto;
+}
+#menue{
+    font-family: century gothic;
+    width: 20%;
+    display: inline-block;
+    margin-left:50%;
+    
+}
+
+#knifeFork{
+position: absolute;
+left:62%;
+}
+
+
+#info #top_down{
+ width: 100%;
+ 
+
+}
+
+#info2{
+    width: 100%;
+    margin-top: -5px;
+    height: 300px;
+    background-color:lightgoldenrodyellow;
+    display: flex;
+}
+.info_section{
+    width: 30%;
     margin-top: 2%;
 }
 
-#sixth #secondImg{
-    margin-top: 15%;
+.info_img{
+   margin-left: 45%;
 }
 
-#sixth h1{
-    float: right;
-    margin-right: 15%;
+
+.info_title{
+  text-align: center;
+  font-family: Century Gothic;
+}
+
+
+.info_p{
+    margin: 0px auto;
+    width: 30%;
+    text-align: center;
     font-family: Century Gothic;
-    margin-top: -10%;
-
-}
-
-#sixth #map{
-    float: right;
-    margin-top: -5%;
-    margin-right: 5%;
-    width: 35%;
-    height: 50%;
-    box-shadow: 2px 2px 2px 2px gray;
 }

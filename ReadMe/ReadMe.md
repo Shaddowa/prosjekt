@@ -510,7 +510,7 @@ Jeg endret bildekarusellen så nå ligner den på den prototypen ragnhild først
 
 **BUG**
 
-30.08.2018
+30.08.2018 FIKK HJELP AV TOBIAS MED BLOB BILEOPPLASTING
 Bildeopplasting.
 Lagret navn, men ikke bilde data.
 
@@ -521,3 +521,25 @@ I POST handleren bruker $_FILES for å lese filnavn og data, ikke $_POST
 La til selection_picture_name i DB for å kunne lagre navn og det faktiske bilde i databsen.
 Laget image.php som henter bilde data, og sender videre bilde som kan vises i browseren.
 "<img src='/php/includes/image.php?id=".$selection_id."'>" viser bilde.
+
+
+01.09.2018 REVAMP NETTSIDEN
+idag har jeg lyst til å komme meg lenger på nettsiden fordi jeg endelig har løst bilde problemene. Nå skal jeg følge designet jeg har sketchet for meg selv og lage nettsiden ferdig
+
+**BUG**
+
+Fikk en bug hvor da jeg skulle skrive description til en av rettene brukte jeg " " for å lage hermetegn og dette ødela koden. Siden $currentSentence allerede er lagd med "" så endte de setningen slik at koden ikke ble riktig. For å løse problemet måtte jeg bare fjerne den retten som hadde "" og da funket det igjen. Trodde det var noe galt med funksjonene som tidligere hadde funket, men det hjalp og se hvilken linje feilen var på ved å gå i inspektor tool i browseren.
+
+Det står at navn er 0, men det kjønner jeg ikke noe av
+
+Har fikset ferdig index siden på nettsiden. Nå ligner den så og si på det jeg sketchet. Må altids tweake litt, har ikke lagt meg ned i detaljene som font eller farger, men gjør det når det bare må polishe på siden. for nå funker det.
+
+mangler bare en knapp som fører brukeren til topen av siden.
+
+05.09.2018 FIKSE PÅ HJEMMESIDEN, OM OSS SIDEN OG DESIGNE ONLINE SIDEN
+
+Nå ser hjemskjermen helt prikk lik skissene. Har lagt til en knapp som blar opp til starten av siden, men man må tydligvis å ha jQuery for å lage en smoothe scrolling. Kan hende jeg fikser det senere. I teorien så er det bare handle siden som gjenstår. På de andre sidene og språksidene, må jeg bare bestemme meg for hva som skal stå der. 
+
+Jeg må sikkert også hele tiden endre utseende, for blir aldri helt fornøyd. Skal også endre font. Når kjøpesiden er ferdig skal jeg jobbe med admin siden, og ha vedlikedhold helt til jeg føler at siden er god nok til å publiseres. 
+
+Skal designe online siden nå på ark og følge den slik.

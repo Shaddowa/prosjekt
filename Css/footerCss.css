@@ -3,7 +3,20 @@
     margin-top: 45%;
     width: 101%;
     height: 600px;
-    background-color: rgb(250, 249, 241)
+    background-color: rgb(224, 219, 212);
+}
+
+#to-top{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-image: url("../media/up.png");
+    background-color: transparent;
+    float: right;
+    left: 90%;
+    margin-top: -1%;
+    position: absolute;
+    outline: none;
 }
 
 

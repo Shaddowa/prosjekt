@@ -23,65 +23,83 @@
     </div>       
 </div>
 
-<div id="Welcome">
+<div id="welcome">
+    <img src="../media/welcome.png">
+    <h1 class="break">~</h1>
+    <h1 class="break">Featured items</h1>
+    
     
 </div>
-<img id="welcomeImg" src="../media/welcome.png">
-<div id="first" class="fillers"></div>
-<h1 id ="love">WE <span style="color:lightcoral">LOVE</span></h1>
-<div id="featureSlide">
-   
-    <div id="featureContent">
-    
+
+<div id="featureContent">
     
     <?php
-        
+    
         $sql = "SELECT * FROM selections WHERE selection_status ='1'";
         $result = $connection -> query($sql);
+        $pic_float_right = true;
         
         while($rad = $result -> fetch_assoc()){
         
            $image = $rad['selection_picture'];
            $name = $rad['selection_name'];
            $selection_id = $rad['selection_id'];
+           $selection_description = $rad['selection_description'];
           
             echo 
                 
                 "<div class='featured'>".
-                    "<img src='/php/includes/image.php?id=".$selection_id."'>".
-                    "<p>$name</p>".
-    
+               
+                    "<img class='featured_pic' src='/php/includes/image.php?id=".$selection_id."'>".
+                    "<h2 class='featured_name'>$name</h2>".
+                    "<p class='featured_description'>$selection_description</p>".
+                    "<form method='POST' action=''>".
+                    "<input class='featured_read_more' type='submit' name='$selection_id' value='Read More'>".
+                    "</form>".
                 "</div>";
                
-        }  
-
+        }
+        
+        echo "<div id='link'><a href='/php/includes/online.php'><h1 id ='menue'>See full menu</h1></a>".
+        "<img id='knifeFork'src='../media/forkKnife.png'></div>";
+    
+        
     ?>
     
+</div>
+
+<div id= "info">
+<img id="top_down" src="../media/asianfood.jpg">
+
+<div id="info2">
+    <div class="info_section">
+        <img class="info_img" src="../media/hour.png">
+        <h5 class="info_title first_title">Always on time</h5>
+        <p class="info_p first_p">No matter what, we intend to deliver when you want it</p>
     </div>
+    <div class="info_section">
+        <img class="info_img" src="../media/bowl.png">
+        <h5 class="info_title">Freshly prepaired food</h5>
+        <p class="info_p">We can guarantie that our food will always show up hot</p>
+    </div>
+    <div class="info_section">
+        <img class="info_img" src="../media/delivery-truck.png">
+        <h5 class="info_title">Delivery available</h5>
+        <p class="info_p">With busy days, delivery is a perfect choice, and we deliver</p>
+    </div>
+    <div class="info_section">
+        <img class="info_img" src="../media/menu.png">
+        <h5 class="info_title">Set a time</h5>
+        <p class="info_p">Schedule a fitting time so that we can prepair the best food for you</p>
+    </div>
+    <div class="info_section">
+        <img class="info_img" src="../media/email.png">
+        <h5 class="info_title">We always answer</h5>
+        <p class="info_p">Questions will always be answerd at least 24 h after you have sent them</p>
+    </div>
+    
 </div>
-<div id="second" class="fillers">
-    <img src="../../media/noodles.png">
-    <p>FuXiang Dumplings er den eneste resturanten i Oslo som er drevet
-        av unge studenter og som leverer ekte asiatiske retter hjem til deg
-    </p>
-</div>
-<div id="third" class="fillers">
-    <img src="../../media/bowl.png">
-    <p>Bestiller du fra oss garanterer vi at du aldri får kalde retter.
-        Det er viktig for oss at maten skal være så fersk som mulig
-    </p>
-</div>
-<div id="fourth" class="fillers">
-    <img id="firstImg" src="../../media/delivery-truck.png">
-    <img src="../../media/shop.png">
-    <p>Vi har både leverings tjenester og pick up alternativer
-    </p>
-</div>
-<div id="fifth" class="fillers">
-    <img id="firstImg" src="../../media/hour.png">
-    <p>Avtal en tid og metod, mens vi gjør resten
-    </p>
-</div>
+<!--
 <div id="sixth" class="fillers">
     <img id="secondImg" id="firstImg" src="../../media/placeholder.png"> : Årvollveien 34e <br>
     <img src="../../media/iphone.png"> : 41216256
@@ -90,6 +108,7 @@
     <div id="map"></div>
     
 </div>
+-->
 
 
 

@@ -1,4 +1,7 @@
+
     <div id="footer">
+        <button id="to-top"></button>
+        
         <div class="wrapper">
         
             
@@ -27,6 +30,7 @@
     if(TITLE === "Home Page | Sweet Treats"){
         ?>
             <script src="../Js/bildeKarusell.js"></script>
+            <script src="../Js/universal.js"></script> 
             <script src="../../Js/Map.js"></script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ12RTRedzzCW2FJMWQm2CyFrK_X34HEk&callback=initMap"></script>
         <?php
@@ -37,12 +41,13 @@
        
         <?php
     
-    
-    } else {
 
     }
+    
+    ?><script src="../../Js/universal.js"></script> 
 
-?>
+
+
 
 </body>
 

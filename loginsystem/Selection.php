@@ -15,12 +15,8 @@
  
     $connection = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
     $connection -> set_charset("utf8");
-
    
-
-
    
-
  
 ?>
 
@@ -54,13 +50,10 @@
         if(!$vare || !$pris || !$beskrivelse || !$type){  //!bilde her){
             echo '<h1 style = "width: 100%; text-align: center"><a href =" ">Du manglet et felt</a></h1>';
             exit();
-
         } else{
-            $sql = "INSERT INTO selections (selection_name, selection_price, selection_type, selection_description, selection_picture_name, selection_picture) VALUES ('$vare', '$pris', '$type', '$beskrivelse', '$picture_name', '$picture')";
+            $sql = "INSERT INTO selections (selection_name, selection_price, selection_type, selection_description, selection_picture_name, selection_picture) VALUES ('$vare', '$pris', '$type', '$beskrivelse','$picture_name','$picture')";
             $result = mysqli_query($connection, $sql);
         }
-
-
     }
 ?>
 
@@ -118,8 +111,6 @@
 
 <?php
 
-
-
 lagTabell($connection);
 
 function lagTabell($connection){
@@ -130,13 +121,11 @@ function lagTabell($connection){
         $sql = "DELETE FROM selections WHERE selection_id = '$value'";
         $result = $connection -> query($sql);
         
-
     }
-
     
-
     $sql = "SELECT * FROM selections";
     $result = $connection->query($sql);
+    
 
     $currentSentence = "";
    
@@ -148,17 +137,22 @@ function lagTabell($connection){
         $selection_description = $rad['selection_description'];
         $selection_picture_name = $rad['selection_picture_name'];
         /*$selection_picture = $rad['selection_picture'];*/
-
-       $currentSentence .=  "<tr><td> $selection_name</td><td>  $selection_price</td><td>"  .
+        
+      $currentSentence .=  "<tr><td> $selection_name</td><td>  $selection_price</td><td>"  .
                             "$selection_description</td><td>  $selection_type</td><td>"  .
                             "$selection_id</td><td>$selection_picture_name</td><td>" .
                             "<form method = 'POST' action = ' '><input type='submit' name='feature'" .
                             "class='featureButtonVarer' value = '$selection_id'></form></td><td>" .
                             "<form method = 'POST' action = ' '><input type='submit' name='delete'" .
                             "class='deleteButtonVarer' value = '$selection_id'></form></td></tr>";
+                        
+
+                    
+
+                        
     
     }
-
+    
     ?>
     <script>
         var tabell = document.getElementById("tabellUtvalg");
@@ -166,7 +160,6 @@ function lagTabell($connection){
     </script>
 
  <?php
-
     function Update($connection){
 
         if(isset($_POST['feature'])){
@@ -184,7 +177,6 @@ function lagTabell($connection){
                 if($currentSelectionStatus == 1){
                     $sql = "UPDATE selections SET selection_status = 0 WHERE selection_id = $value";
                     
-
                 } else if($currentSelectionStatus == 0){
                     $sql = "UPDATE selections SET selection_status = 1  WHERE selection_id = $value";
                     
@@ -200,11 +192,8 @@ function lagTabell($connection){
         checkStatus($connection);
         
     }
-
     Update($connection);
-
 }
-
 function checkStatus($connection){
     
   
@@ -218,21 +207,17 @@ function checkStatus($connection){
                         
         $currentSlectionId = $rad['selection_id'];
         $currentSelectionStatus = $rad['selection_status'];
-
                         
-
         array_push($ID, $currentSlectionId);
         array_push($statusB, $currentSelectionStatus);
                         
     }
-
-
             
     for($i = 0; $i < sizeof($ID); $i++){
         echo "<script>
                 
         var button = document.getElementsByClassName('featureButtonVarer');
-                
+       console.log(button[0]);
         if($ID[$i] != button[$i].value){
                 
             console.log('ingen match')
@@ -244,12 +229,10 @@ function checkStatus($connection){
                 button[$i].style.backgroundColor = 'yellow';
             }
         }
-
         </script>";
     }
     
 } 
-
     
 ?> 
 

@@ -30,18 +30,22 @@ FULLFØRTE TASKS:
 
 GJENSTÅENDE TASKS: 
 
-☐ DESIGNE! Sett deg ned og tenk gjennom det
+☐ Lage kjøpe siden
+
 NESTE TASK:
 
 
     
 
 ☐ Designe layouten @critical  
-
-  CONST: små tweaks
+☐ Lage ny logo?
+☐ Nye fargekombinasjoner?
+☐ Nye fonter?
+☐ Lage tilpassede bildekarusell bilder
 
 ☐ php & mySQL databse implementert i nettsiden @high 
-    ☐ rating system
+    ☐ Melding om ordre skal komme på sms og admin side
+    ☐ Admin side skal være en total oversikt over hvordan alt går (salg)
     ☐ Språk instillinger
     ☐ Handdlekurv som skal bli sent via sms når kunden vil bestille
    
