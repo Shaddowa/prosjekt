@@ -543,3 +543,27 @@ Nå ser hjemskjermen helt prikk lik skissene. Har lagt til en knapp som blar opp
 Jeg må sikkert også hele tiden endre utseende, for blir aldri helt fornøyd. Skal også endre font. Når kjøpesiden er ferdig skal jeg jobbe med admin siden, og ha vedlikedhold helt til jeg føler at siden er god nok til å publiseres. 
 
 Skal designe online siden nå på ark og følge den slik.
+
+
+19.09.2018 LAGE ONLINE SIDEN
+
+Idag og i morgen / helgen må jeg bli ferdig med online siden. Eneste grunnen for at den ikke har blitt ferdig, er fordi jeg vet ikke helt hvordan jeg ønsker at den skal se ut, men idag har jeg en anelse.
+
+Laget en side i online som jeg er fornøyd med til nå, den må ha litt mere funksjonalitet og så kanskje gjøres finere etterhvert. De problemene som oppstod var å definere bakgrundsbildet til hver av elementene og tenke på den beste måten å legge til de overlayene jeg ønsket at brukeren skulle få. Css var lettere enn JS CSS bør egentlig alltid brukes når noe med styling skal skje! JS bør brukes kunn til å endre styles og legge til funksjoner. Dette ble pathen:
+
+    style = 'background-image:url(/php/includes/image.php?id=$selection_id)';>".   
+
+Jeg begynner å nerme meg en endelig versjon når det kommer til det funksjonelle.
+
+
+
+
+20.09.2018 BLI FERDIG MED ONLINE SIDEN
+
+Idag ble jeg ferdig med Online siden, hvertfall det visuelle. Nå har vi en fungerende handlekurv og informasjon på alle rettene. Måtte endre koden litt fra min prototype, for da hadde jeg en handlekurv som skulle vises når musen gikk over den. Nå er handlekurven fixed på skjermen, og den funker ganske bra. Et triks jeg brukte var å ha en:
+
+    var currentSentece = ""
+
+Dette var veldig bra! Nå gjennstår bare å lage ordensskjemaet og fikse litt på admin siden, og legge til språk? (om jeg gidder...)
+Designvis er det fortsatt mye som gjenstår.
+

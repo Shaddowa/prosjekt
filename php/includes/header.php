@@ -1,3 +1,20 @@
+<?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL | E_STRICT);
+
+$dbServername = "localhost";
+$dbUsername = "root";
+$dbPassword = "root";
+$dbName = "sweettreats";
+
+$connection = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,8 @@
+body{
+
+    background: url('../media/background2.png') no-repeat center center fixed;
+}
+
 #om_oss{
     width: 100%;
     height: auto;

@@ -1,5 +1,4 @@
 //Gir totalsummen til alle varene du har i handlekurven
-var sumTotal = 0;
 
 
 

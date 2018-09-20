@@ -27,15 +27,18 @@ FULLFØRTE TASKS:
     ✔ oppgradere grafikken på nettsiden og style @done (2018-8-19 13:28:54)
     ✔ Endre utseende på nettsiden. @done (2018-8-19 13:29:09)
     ✔ vise bilder på nettsidedn fra en blob (FEATURED SIDEN); @done (2018-8-30 16:26:11)
-
-GJENSTÅENDE TASKS: 
-
-☐ Lage kjøpe siden
-
-NESTE TASK:
-
-
+    ✔ Lage kjøpe siden @done (9/19/2018, 11:33:23 PM)
+    ✔ Legge til informasjonsknapp på hvert av alternativene @done (9/20/2018, 9:31:51 PM)
     
+✔ Ha en fungerende handlekurv som viser hva man har @done (9/20/2018, 9:31:58 PM)
+
+NESTE TASKS: 
+
+☐ Lage et ordensskjema
+☐ koble orderen opp til admin siden
+☐ Handdlekurv som skal bli sent via sms/epost når kunden vil bestille
+
+GJENNSTÅENDE TASK:
 
 ☐ Designe layouten @critical  
 ☐ Lage ny logo?
@@ -47,7 +50,7 @@ NESTE TASK:
     ☐ Melding om ordre skal komme på sms og admin side
     ☐ Admin side skal være en total oversikt over hvordan alt går (salg)
     ☐ Språk instillinger
-    ☐ Handdlekurv som skal bli sent via sms når kunden vil bestille
+   
    
     
 

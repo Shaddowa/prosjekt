@@ -32,7 +32,6 @@ var idHK = -1;
 
 //Utvalget har ingen varer enda
 var utvalgEl = [];
-var handlekurvEl = [];
-var antallHandlekurv = [];
+
 
 

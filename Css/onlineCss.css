@@ -1,9 +1,153 @@
-#ContentOnline{
+body{
+
+    background: url('../media/background2.png') no-repeat center center fixed;
+}
+
+#ContentFrame{
     width: 100%;
     height: 1000px;
+    display: flex;
+
+}
+
+#content{
+    width: 75%;
+    height: 1000px;
+    overflow-y: scroll;  
+}
+
+
+
+.item-container{
+    width: 45%;
+    height: 35%;
+    display: inline-block;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+    margin-top: 5%;
+   
+    
+}
+
+
+ .item-container-box{
+    width: 100%;
+    height: 30%;
+    visibility: visible;
+    display: inline-block;
+
+ }
+.item-container-box:hover{
+    z-index: 50;
+    background-image: url("/../media/add.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+    cursor: pointer;
+    
+
+}
+
+.itemText{
+    font-size: 2.1em;
+    color: white;
+    text-shadow: 2px 2px gray;
+    margin-top: -7%;
+}
+
+.itemPrice{
+    font-size: 25px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.itemPrice::after{
+    content: ",-";
+
+}
+
+.info{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 20;
+    margin-left: 55%;
+    background-image: url("/../media/info.png");
+    background-size: cover;
+
+}
+
+.info:hover{
+    cursor: pointer;
+}
+
+.itemDescription{
+    width: 20%;
+    height: 30px;
+    font-size: 20px;
+    margin-left : 10%;
+    margin-top: -40%;
+    font-family: Century Gothic;
+    display: inline-block;
+    visibility: hidden;    
+}
+
+#shoppingCart{
+    width: 25%;
+    height: 550px;
+    margin-right: 1%;
+    margin-top: 5%;
+   
+}
+
+#shoppingCart img{
+margin-left: 30%;
+}
+
+#itemsCart{
+    width: 80%;
+    height: 70%;
+    margin: 0px auto;
+    border: 2px solid black;
     background-color: white;
 }
 
-h1{
+#itemsCart h4{
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+#itemsCart h5{
+    text-align: center;
+    font-family: Century Gothic;
+    font-size: 20px;
+    margin-bottom: 10px;
+    
+}
+
+#itemsInCart{
+    width: 90%;
+    height: 50%;
+    margin: 0px auto;
+    border: inset;
+    overflow-y: scroll;
+}
+
+.handleKurvEl{
+    text-align: center;
+    font-family: Century Gothic;
+    font-weight: bold;
+}
+
+#order{
+    margin-left: 40%;
+    height: 40px;
+    background-color: darkolivegreen;
     color: white;
+    
 }
