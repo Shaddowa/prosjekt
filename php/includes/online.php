@@ -79,10 +79,49 @@ include('header.php');
         
         
     </div>
-
-
-
+    <div id="modalModal">
+        <div id="myModal" class="modal">
+            <div class="modal-content">            
+                <span class="close">&times;</span>
+                <form method="POST" action="" name="form">
+                    <input class="form-el" type="text" name="name" placeholder="Enter your name"><br><br>
+                    <label for="delivery">Choose between the following options</label><br><br>
+                    <input id="pick-up" type="radio" name="delivery" checked="checked">Pick up
+                    <input id="delivery" type="radio" name="delivery">delivery<br><br>
+                    <input class="form-el" type="text" name="email" placeholder="Your E-mail"><br><br>
+                    <input class="form-el" type="number" name="phone" placeholder="Your number"><br><br>
+                    <label for="arrangment">Choose a date & time</label><br><br>
+                    <input class="form-el" type="datetime-local" name="arrangement"><br><br>
+                    <input id="proceed" type="submit" name="proceed" value="Finnish">
+                    <input id="orderBag" type="hidden" name="order">
+                    <input id="orderSum" type="hidden" name="sum">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- SEND BEKREFTELSES MELDING -->
+<?php
+    if(isset($_POST['proceed'])){
+
+        $name = $_POST['name'];
+        if(isset($_POST['delivery'])){
+            $chosen = $_POST['delivery'];
+        };
+
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $time = $_POST['arrangement'];
+        $order = $_POST['order'];
+        $sum = $_POST['sum'];
+
+        echo "Navn :".$name."email:".$email."tlf:".$phone."tid:".$time."order:".$order."sum".$sum;
+
+       
+        
+    };
+
+?>
 
 
 <?php

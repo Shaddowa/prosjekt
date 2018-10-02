@@ -567,3 +567,15 @@ Idag ble jeg ferdig med Online siden, hvertfall det visuelle. Nå har vi en fung
 Dette var veldig bra! Nå gjennstår bare å lage ordensskjemaet og fikse litt på admin siden, og legge til språk? (om jeg gidder...)
 Designvis er det fortsatt mye som gjenstår.
 
+02.10.2018 OPTIMISERING & ORDENSSKJEMA
+
+Idag skal jeg optimisere handlelisten, og lage et fungerende ordensskjema.
+
+Lagde ordenskjema, og har nå + og - knapp i selve handlelisten. Kjøpe knappen er ikke tilgjengelig før man legger noe i handlevognen og trykker man på den mens vognen er tom, får man alert, om at handlekurven er tom. Nå må jeg koble det opp mot en tabell i en database også er den delen ferdig.
+
+**BUG**
+Fant en bug som gjorde at når jeg klikket meg ut av skjemaet, og begynte å trykke på pluss og minus knappene litt random, så ville noe rart skje med handlelisten min, og noen av elementene ville ikke bli vist på siden. Tror kanskje at dette har noe med id og gjøre, men er enda ikke helt sikker. Dette skjer kunn når du har vært på ordenskjemaet, ikke før, ifølge mine observasjoner.
+
+Hadde også en bug om at input type hidden av ordre ble udefinert, viste seg bare å være at jeg skrev handelkurv[i].navn isteden for handlekurv[i].vare
+
+Nå har jeg gjort mye, skal koble opp alt til en tabell i morgen, vise den på admin siden, og konfigurere orderbekreftelse på e-mail. Kanskje jeg også bør ha en preview av hva kunden har kjøpt, men det er ikke kritisk nå.

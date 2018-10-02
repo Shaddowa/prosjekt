@@ -45,7 +45,7 @@
 
     }
     
-    ?><script src="../../Js/universal.js"></script> 
+    ?><script src="/../Js/universal.js"></script> 
 
 
 

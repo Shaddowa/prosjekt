@@ -4,5 +4,7 @@ oppKnapp.addEventListener("click", toTop);
 
 function toTop(){
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    
 }
+
 

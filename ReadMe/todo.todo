@@ -29,12 +29,12 @@ FULLFØRTE TASKS:
     ✔ vise bilder på nettsidedn fra en blob (FEATURED SIDEN); @done (2018-8-30 16:26:11)
     ✔ Lage kjøpe siden @done (9/19/2018, 11:33:23 PM)
     ✔ Legge til informasjonsknapp på hvert av alternativene @done (9/20/2018, 9:31:51 PM)
-    
-✔ Ha en fungerende handlekurv som viser hva man har @done (9/20/2018, 9:31:58 PM)
+    ✔ Ha en fungerende handlekurv som viser hva man har @done (9/20/2018, 9:31:58 PM)
+    ✔ Lage et ordensskjema @done (10/2/2018, 6:58:45 PM)
 
 NESTE TASKS: 
 
-☐ Lage et ordensskjema
+
 ☐ koble orderen opp til admin siden
 ☐ Handdlekurv som skal bli sent via sms/epost når kunden vil bestille
 
@@ -45,6 +45,7 @@ GJENNSTÅENDE TASK:
 ☐ Nye fargekombinasjoner?
 ☐ Nye fonter?
 ☐ Lage tilpassede bildekarusell bilder
+☐ Linke read more knappene til den spesifikke varen på online siden. Bruk <a href="#noe her">
 
 ☐ php & mySQL databse implementert i nettsiden @high 
     ☐ Melding om ordre skal komme på sms og admin side
